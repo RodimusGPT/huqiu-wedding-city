@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huqiu Wedding City · 虎丘婚纱城 — A High-End Bridal Field Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F4EF;        /* cool porcelain / raw silk */
+    --silk:#FBFCF9;         /* card white */
+    --ink:#1B2620;          /* green-black Suzhou ink */
+    --ink-soft:#4C574F;
+    --ink-faint:#7A847C;
+    --jade:#39654F;         /* deep celadon / pine */
+    --jade-mid:#5E8A73;
+    --celadon:#CBDBCF;
+    --celadon-wash:#E2EBE3;
+    --cinnabar:#B23A2E;     /* muted vermilion / seal red */
+    --cinnabar-soft:#D2675A;
+    --rule:rgba(27,38,32,.14);
+    --rule-strong:rgba(27,38,32,.26);
+    --shadow:0 1px 0 rgba(27,38,32,.05), 0 18px 40px -28px rgba(27,38,32,.45);
+
+    --ff-display:"Fraunces", Georgia, serif;
+    --ff-body:"Hanken Grotesk", system-ui, sans-serif;
+    --ff-mono:"Spline Sans Mono", ui-monospace, monospace;
+    --ff-cn-serif:"Noto Serif SC", serif;
+    --ff-cn-sans:"Noto Sans SC", sans-serif;
+
+    --wrap:1140px;
+    --gap:clamp(64px,9vw,124px);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--ff-body);font-size:17.5px;line-height:1.62;
+    -webkit-font-smoothing:antialiased;font-feature-settings:"ss01";
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--celadon);color:var(--ink)}
+  a{color:inherit}
+  img{max-width:100%}
+
+  .wrap{width:min(var(--wrap),calc(100% - 44px));margin-inline:auto}
+  .narrow{max-width:760px}
+
+  /* ---------- skip + progress ---------- */
+  .skip{position:fixed;left:-999px;top:10px;z-index:200;background:var(--ink);color:var(--paper);
+    padding:10px 16px;border-radius:4px;text-decoration:none;font:600 14px var(--ff-body)}
+  .skip:focus{left:12px}
+  .progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--cinnabar);z-index:120;transition:width .12s linear}
+
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:100;background:rgba(242,244,239,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+  .nav-in{display:flex;align-items:center;gap:24px;height:60px}
+  .brand{display:flex;align-items:baseline;gap:9px;text-decoration:none;white-space:nowrap;margin-right:auto}
+  .brand .cn{font-family:var(--ff-cn-serif);font-weight:700;font-size:20px;letter-spacing:.04em}
+  .brand .en{font-family:var(--ff-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+  nav.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  nav.links::-webkit-scrollbar{display:none}
+  nav.links a{font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink-soft);padding:7px 11px;border-radius:20px;white-space:nowrap;transition:.2s}
+  nav.links a:hover{color:var(--ink);background:var(--celadon-wash)}
+  nav.links a.on{color:var(--jade);background:var(--celadon-wash)}
+  @media(max-width:860px){nav.links{display:none}}
+
+  /* ---------- type ---------- */
+  .eyebrow{font-family:var(--ff-mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--jade);display:flex;align-items:center;gap:12px}
+  .eyebrow .num{color:var(--cinnabar)}
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule);max-width:120px}
+  h1,h2,h3{font-family:var(--ff-display);font-weight:600;line-height:1.04;letter-spacing:-.012em;margin:0}
+  h2{font-size:clamp(30px,4.6vw,50px)}
+  h3{font-size:clamp(21px,2.4vw,27px);letter-spacing:-.006em}
+  p{margin:0 0 1.05em}
+  .lead{font-size:clamp(18.5px,2vw,21px);line-height:1.55;color:var(--ink)}
+  .muted{color:var(--ink-soft)}
+  strong{font-weight:600}
+  .cn{font-family:var(--ff-cn-sans)}
+  .pull{color:var(--cinnabar);font-weight:600}
+
+  section{padding-block:var(--gap)}
+  .sec-head{margin-bottom:42px}
+  .sec-head h2{margin-top:16px;max-width:18ch}
+  .sec-head .dek{margin-top:18px;max-width:60ch;color:var(--ink-soft);font-size:18px}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;padding-top:clamp(48px,8vw,96px);padding-bottom:clamp(40px,6vw,80px);overflow:hidden}
+  .hero .veil{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(60% 70% at 82% 8%,rgba(91,138,115,.16),transparent 60%),
+      radial-gradient(50% 60% at 6% 92%,rgba(178,58,46,.07),transparent 60%);}
+  .hero-in{position:relative;z-index:1}
+  .hero .kicker{font-family:var(--ff-mono);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:26px}
+  .hero .kicker b{color:var(--cinnabar);font-weight:500}
+  .hero h1{font-size:clamp(52px,11vw,138px);font-weight:600;letter-spacing:-.03em}
+  .hero h1 .cnbig{display:block;font-family:var(--ff-cn-serif);font-weight:700;letter-spacing:.02em;
+    font-size:clamp(40px,8.2vw,104px);color:var(--jade);margin-top:.06em}
+  .hero .deck{margin-top:30px;max-width:62ch;font-size:clamp(18px,2vw,22px);line-height:1.5;color:var(--ink)}
+  .hero .deck b{color:var(--ink);font-weight:600;border-bottom:2px solid var(--celadon);padding-bottom:1px}
+
+  .ledger{margin-top:46px;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);
+    display:grid;grid-template-columns:repeat(4,1fr)}
+  .ledger div{padding:18px 20px 16px;border-left:1px solid var(--rule)}
+  .ledger div:first-child{border-left:0;padding-left:0}
+  .ledger .fig{font-family:var(--ff-display);font-weight:600;font-size:clamp(26px,3vw,36px);line-height:1;letter-spacing:-.02em}
+  .ledger .cap{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-top:9px}
+  @media(max-width:680px){.ledger{grid-template-columns:1fr 1fr}.ledger div:nth-child(3){border-left:0;padding-left:0}.ledger div{border-top:1px solid var(--rule)}.ledger div:first-child,.ledger div:nth-child(2){border-top:0}}
+
+  .usenote{margin-top:30px;font-family:var(--ff-mono);font-size:12px;letter-spacing:.04em;color:var(--ink-faint);max-width:70ch}
+
+  /* ---------- generic cards ---------- */
+  .card{background:var(--silk);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow)}
+  .grid{display:grid;gap:20px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:820px){.g2,.g3{grid-template-columns:1fr}}
+
+  /* street vs city compare */
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+  @media(max-width:760px){.vs{grid-template-columns:1fr}}
+  .vs .card{padding:26px 26px 28px}
+  .vs .tag{font-family:var(--ff-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:14px}
+  .vs .t-old{background:#EFE7E3;color:#8a5a44}
+  .vs .t-new{background:var(--celadon-wash);color:var(--jade)}
+  .vs h3 .cn{font-family:var(--ff-cn-serif);font-weight:600}
+  .vs ul{margin:14px 0 0;padding:0;list-style:none}
+  .vs li{position:relative;padding-left:20px;margin-bottom:9px;font-size:15.5px;color:var(--ink-soft)}
+  .vs li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--jade-mid)}
+  .verdict{margin-top:26px;padding:20px 24px;border-left:3px solid var(--cinnabar);background:var(--silk);border-radius:0 12px 12px 0}
+  .verdict b{color:var(--cinnabar)}
+
+  /* ---------- MAP signature ---------- */
+  .map-sec{background:linear-gradient(180deg,var(--celadon-wash),var(--paper) 78%)}
+  .mapframe{background:var(--silk);border:1px solid var(--rule);border-radius:18px;padding:clamp(16px,3vw,32px);box-shadow:var(--shadow)}
+  .map-svg{width:100%;height:auto;display:block}
+  .map-legend{display:flex;flex-wrap:wrap;gap:18px 30px;margin-top:22px;padding-top:22px;border-top:1px solid var(--rule)}
+  .leg{display:flex;gap:11px;align-items:flex-start;max-width:330px}
+  .leg .sw{width:16px;height:16px;border-radius:4px;flex:none;margin-top:3px;border:1px solid var(--rule-strong)}
+  .leg b{font-family:var(--ff-cn-serif)}
+  .leg .en{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  .leg p{font-size:14px;color:var(--ink-soft);margin:3px 0 0}
+
+  /* zone strip beneath map */
+  .zones{margin-top:34px;display:grid;gap:0;border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--silk)}
+  .zone-row{display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;padding:18px 22px;border-top:1px solid var(--rule)}
+  .zone-row:first-child{border-top:0}
+  .zone-row.hot{background:var(--celadon-wash)}
+  .zcode{font-family:var(--ff-display);font-weight:600;font-size:30px;line-height:1}
+  .zcode small{display:block;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:5px;font-weight:500}
+  .zone-row .zd b{font-family:var(--ff-cn-serif)}
+  .zone-row .zd{font-size:15px;color:var(--ink-soft)}
+  .zone-row .ztag{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:20px;white-space:nowrap}
+  .ztag.hi{background:var(--jade);color:#fff}
+  .ztag.mid{background:var(--celadon);color:var(--jade)}
+  .ztag.lo{background:#ECE9E2;color:var(--ink-faint)}
+  @media(max-width:640px){.zone-row{grid-template-columns:64px 1fr;}.zone-row .ztag{grid-column:2}}
+
+  /* ---------- shop dossiers ---------- */
+  .shops{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:820px){.shops{grid-template-columns:1fr}}
+  .dossier{padding:26px 26px 24px;display:flex;flex-direction:column}
+  .dossier.flag{border-color:var(--jade);box-shadow:0 0 0 1px var(--jade),var(--shadow)}
+  .dossier .top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+  .dossier .name{font-family:var(--ff-cn-serif);font-weight:700;font-size:27px;letter-spacing:.02em;line-height:1.05}
+  .dossier .rom{font-family:var(--ff-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-top:7px}
+  .dossier .flagpill{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--jade);color:#fff;padding:4px 9px;border-radius:20px;white-space:nowrap}
+  .dossier .gloss{margin:15px 0 16px;font-size:15px;color:var(--ink-soft);flex:1}
+  .dossier .meta{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;border-top:1px solid var(--rule);padding-top:14px;font-size:13.5px}
+  .dossier .meta dt{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding-top:2px}
+  .dossier .meta dd{margin:0;color:var(--ink)}
+  .dossier .meta dd .cn{font-family:var(--ff-cn-sans)}
+
+  /* spot-it-yourself */
+  .spot{margin-top:30px;background:var(--ink);color:#E9ECE6;border-radius:16px;padding:clamp(26px,3.5vw,40px)}
+  .spot .eyebrow{color:var(--celadon)}
+  .spot .eyebrow::after{background:rgba(255,255,255,.18)}
+  .spot h3{color:#fff;margin-top:14px}
+  .spot p{color:#C3CBC3}
+  .spot ol{margin:18px 0 0;padding-left:0;counter-reset:s;list-style:none}
+  .spot li{position:relative;padding:13px 0 13px 50px;border-top:1px solid rgba(255,255,255,.12);font-size:15.5px;color:#D6DCD5}
+  .spot li:first-child{border-top:0}
+  .spot li::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;left:0;top:13px;
+    font-family:var(--ff-mono);font-size:12px;color:var(--cinnabar-soft);letter-spacing:.05em}
+  .spot li b{color:#fff}
+
+  /* ---------- glossary term cards ---------- */
+  .terms{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:820px){.terms{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.terms{grid-template-columns:1fr}}
+  .term{background:var(--silk);border:1px solid var(--rule);border-radius:11px;padding:16px 17px}
+  .term .h{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .term .zh{font-family:var(--ff-cn-serif);font-weight:600;font-size:19px}
+  .term .py{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;color:var(--cinnabar);text-transform:uppercase}
+  .term .en{font-weight:600;font-size:13.5px;margin-top:3px}
+  .term p{font-size:13.5px;color:var(--ink-soft);margin:7px 0 0;line-height:1.5}
+
+  /* checklist tells */
+  .tells{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+  @media(max-width:760px){.tells{grid-template-columns:1fr}}
+  .tell{display:flex;gap:13px;padding:13px 0;border-bottom:1px solid var(--rule)}
+  .tell .mk{font-family:var(--ff-mono);color:var(--jade);font-size:15px;flex:none;margin-top:1px}
+  .tell b{display:block;margin-bottom:2px}
+  .tell span{font-size:14.5px;color:var(--ink-soft)}
+
+  /* ---------- timeline ribbon ---------- */
+  .timeline{margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--silk)}
+  @media(max-width:760px){.timeline{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.timeline{grid-template-columns:1fr}}
+  .tl{padding:20px;border-left:1px solid var(--rule)}
+  .tl:first-child{border-left:0}
+  .tl .when{font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cinnabar)}
+  .tl h4{font-family:var(--ff-display);font-weight:600;font-size:18px;margin:10px 0 6px}
+  .tl p{font-size:14px;color:var(--ink-soft);margin:0}
+
+  /* ---------- MONEY (dark) ---------- */
+  .money{background:var(--ink);color:#E8EBE5}
+  .money .eyebrow{color:var(--celadon)}
+  .money .eyebrow::after{background:rgba(255,255,255,.16)}
+  .money h2{color:#fff}
+  .money .sec-head .dek{color:#AEB7AE}
+  .money .lead{color:#DDE2DC}
+  .money .muted{color:#AEB7AE}
+
+  .tiers{display:grid;gap:12px;margin-top:8px}
+  .tier{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;
+    background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:18px 22px}
+  @media(max-width:640px){.tier{grid-template-columns:1fr;gap:8px}}
+  .tier .price{font-family:var(--ff-display);font-weight:600;font-size:clamp(22px,3vw,30px);color:#fff;letter-spacing:-.01em;white-space:nowrap}
+  .tier .price small{font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;color:var(--cinnabar-soft);display:block;margin-top:4px;font-weight:500;text-transform:uppercase}
+  .tier .desc{color:#C6CDC6;font-size:15px}
+  .tier .desc b{color:#fff}
+  .tier.peak{border-color:var(--jade-mid);background:rgba(94,138,115,.16)}
+
+  .insight{margin-top:34px;border:1px solid rgba(210,103,90,.5);background:rgba(178,58,46,.1);border-radius:16px;padding:clamp(24px,3.4vw,38px)}
+  .insight .lab{font-family:var(--ff-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cinnabar-soft)}
+  .insight h3{color:#fff;margin:12px 0 10px;font-size:clamp(22px,2.6vw,30px)}
+  .insight p{color:#DDE2DC;margin-bottom:0}
+  .insight .big{font-family:var(--ff-display);font-weight:600;color:var(--cinnabar-soft);font-size:clamp(40px,7vw,76px);line-height:1;margin:14px 0 6px;letter-spacing:-.02em}
+
+  .script{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:760px){.script{grid-template-columns:1fr}}
+  .playbook h3,.donthaggle h3{color:#fff;font-size:21px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .playbook h3 .ic{color:var(--celadon)}.donthaggle h3 .ic{color:var(--cinnabar-soft)}
+  .step{padding:13px 0;border-top:1px solid rgba(255,255,255,.12);font-size:15px;color:#D2D9D2}
+  .step:first-of-type{border-top:0}
+  .step b{color:#fff}
+  .donthaggle p{color:#C6CDC6;font-size:15px}
+  .donthaggle .note{border-left:3px solid var(--cinnabar-soft);padding:4px 0 4px 16px;margin-top:14px;color:#E8EBE5}
+
+  /* phrasebook */
+  .phrase-wrap{margin-top:36px}
+  .phrasebook{margin-top:18px;border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden}
+  .pr{display:grid;grid-template-columns:1.2fr 1fr 1.1fr;gap:16px;padding:14px 20px;border-top:1px solid rgba(255,255,255,.1);align-items:baseline}
+  .pr:first-child{border-top:0}
+  .pr .zh{font-family:var(--ff-cn-sans);font-weight:500;font-size:17px;color:#fff}
+  .pr .py{font-family:var(--ff-mono);font-size:12.5px;color:var(--cinnabar-soft);letter-spacing:.02em}
+  .pr .en{font-size:14px;color:#BFC7BF}
+  @media(max-width:620px){.pr{grid-template-columns:1fr;gap:3px;padding:13px 18px}.pr .en{margin-top:2px}}
+
+  /* ---------- fitting room ---------- */
+  .bring{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:8px}
+  @media(max-width:760px){.bring{grid-template-columns:1fr}}
+  .bring .col h3{margin-bottom:16px}
+  .checklist{list-style:none;margin:0;padding:0}
+  .checklist li{position:relative;padding:11px 0 11px 34px;border-bottom:1px solid var(--rule);font-size:15.5px;color:var(--ink)}
+  .checklist li b{font-weight:600}
+  .checklist li::before{content:"";position:absolute;left:4px;top:14px;width:15px;height:15px;border:1.5px solid var(--jade);border-radius:4px}
+  .checklist.avoid li::before{border-color:var(--cinnabar);border-radius:50%}
+  .checklist.avoid li::after{content:"";position:absolute;left:9px;top:19px;width:5px;height:1.5px;background:var(--cinnabar)}
+  .checklist li span{color:var(--ink-soft);font-size:14px}
+
+  /* ---------- visit / logistics ---------- */
+  .visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:start}
+  @media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+  .addr{padding:0;overflow:hidden}
+  .addr .hd{background:var(--jade);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .addr .hd .cn{font-family:var(--ff-cn-serif);font-weight:600;font-size:19px}
+  .addr .hd .en{font-family:var(--ff-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  .addr dl{margin:0;padding:8px 24px 22px}
+  .addr .row{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--rule)}
+  .addr .row:first-child{border-top:0}
+  .addr dt{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding-top:3px}
+  .addr dd{margin:0;font-size:15px}
+  .addr dd .cn{font-family:var(--ff-cn-sans)}
+  .addr dd .sub{display:block;font-size:13px;color:var(--ink-soft);margin-top:3px}
+
+  .routes h3{margin-bottom:8px}
+  .route{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--rule)}
+  .route .mode{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ink);padding:5px 10px;border-radius:20px;height:fit-content;white-space:nowrap}
+  .route .mode.rec{background:var(--cinnabar)}
+  .route .rt b{font-weight:600}
+  .route .rt{font-size:15px}
+  .route .rt .cn{font-family:var(--ff-cn-sans)}
+  .route .rt span{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:3px}
+
+  .twoday{margin-top:40px}
+  .twoday .grid{margin-top:18px}
+  .day{padding:24px 26px}
+  .day .d{font-family:var(--ff-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cinnabar)}
+  .day h4{font-family:var(--ff-display);font-weight:600;font-size:21px;margin:8px 0 12px}
+  .day ol{margin:0;padding-left:18px;color:var(--ink-soft);font-size:14.5px}
+  .day ol li{margin-bottom:7px}
+
+  /* ---------- callouts ---------- */
+  .tip{border-left:3px solid var(--cinnabar);background:var(--silk);border-radius:0 12px 12px 0;padding:20px 24px;margin:30px 0;box-shadow:var(--shadow)}
+  .tip .l{font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cinnabar);margin-bottom:7px}
+  .tip p{margin:0;font-size:15.5px}
+  .tip p+p{margin-top:9px}
+
+  .flags{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.flags{grid-template-columns:1fr}}
+  .flag-item{background:var(--silk);border:1px solid var(--rule);border-left:3px solid var(--cinnabar);border-radius:0 11px 11px 0;padding:20px 22px}
+  .flag-item h4{font-family:var(--ff-display);font-weight:600;font-size:18px;margin:0 0 7px;display:flex;gap:9px;align-items:baseline}
+  .flag-item h4 .x{color:var(--cinnabar);font-family:var(--ff-mono);font-size:14px}
+  .flag-item p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+  /* ---------- game plan ---------- */
+  .plan-sec{background:linear-gradient(180deg,var(--paper),var(--celadon-wash))}
+  .plansteps{counter-reset:p;display:grid;gap:2px;margin-top:10px}
+  .pstep{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:baseline;background:var(--silk);
+    border:1px solid var(--rule);padding:20px 24px}
+  .pstep:first-child{border-radius:14px 14px 0 0}
+  .pstep:last-child{border-radius:0 0 14px 14px}
+  .pstep .pn{font-family:var(--ff-display);font-weight:600;font-size:34px;color:var(--jade);line-height:1}
+  .pstep .pc b{font-weight:600}
+  .pstep .pc{font-size:15.5px;color:var(--ink-soft)}
+  .pstep .pc b{color:var(--ink)}
+
+  /* ---------- footer / sources ---------- */
+  footer{background:var(--ink);color:#AEB7AE;padding-block:60px 50px}
+  footer .eyebrow{color:var(--celadon)}
+  footer .eyebrow::after{background:rgba(255,255,255,.16)}
+  footer h3{color:#fff;margin:14px 0 8px}
+  .srclist{columns:2;column-gap:36px;margin-top:22px;font-size:13.5px;line-height:1.5}
+  @media(max-width:680px){.srclist{columns:1}}
+  .srclist a{display:block;color:#C6CDC6;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.08);break-inside:avoid;transition:.2s}
+  .srclist a:hover{color:#fff}
+  .srclist a .s{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cinnabar-soft);display:block}
+  .disc{margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:12.5px;color:#8c948c;max-width:80ch}
+  .disc b{color:#C6CDC6}
+  .colophon{margin-top:22px;font-family:var(--ff-mono);font-size:11px;letter-spacing:.06em;color:#727a72;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .colophon .dot{color:var(--cinnabar-soft)}
+
+  /* ---------- inline source citations ---------- */
+  a.c{font-family:var(--ff-mono);font-weight:600;font-size:.66em;line-height:0;vertical-align:super;color:var(--jade);text-decoration:none;letter-spacing:.02em;transition:color .15s;white-space:nowrap}
+  a.c::before{content:"[";color:var(--jade-mid);opacity:.65}
+  a.c::after{content:"]";color:var(--jade-mid);opacity:.65}
+  a.c:hover,a.c:focus-visible{color:var(--cinnabar)}
+  a.c + a.c{margin-left:1px}
+  :target{scroll-margin-top:88px}
+  /* numbered + anchored source list */
+  .srclist a{scroll-margin-top:94px}
+  .srclist a .n{font-family:var(--ff-mono);font-size:11px;color:var(--celadon);font-weight:700;margin-right:3px}
+  .srclist a:target,.srclist a.hit{background:rgba(203,219,207,.13);outline:1px solid rgba(203,219,207,.32);outline-offset:3px;border-radius:3px;color:#fff}
+
+  /* ---------- 龙凤褂 gua density ladder ---------- */
+  .gua{display:flex;flex-direction:column;gap:10px;margin:6px 0 0}
+  .gua-row{display:grid;grid-template-columns:154px 1fr 132px;gap:18px;align-items:center;padding:13px 18px;background:var(--celadon-wash);border:1px solid rgba(57,101,79,.16);border-radius:12px}
+  .gua-row .gname .cn{font-family:var(--ff-cn-serif);font-weight:600;color:var(--jade);font-size:18px;display:block;line-height:1.15}
+  .gua-row .gname .en{font-family:var(--ff-mono);font-size:10px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase}
+  .gua-meter{height:13px;border-radius:7px;background:rgba(178,58,46,.18);overflow:hidden}
+  .gua-meter>i{display:block;height:100%;border-radius:7px;background:linear-gradient(90deg,var(--jade-mid),var(--jade))}
+  .gua-row .gprice{font-family:var(--ff-mono);font-size:11.5px;color:var(--ink-soft);text-align:right;line-height:1.4}
+  .gua-row .gprice b{color:var(--ink);font-weight:600}
+  .gua-row.top{background:var(--ink);border-color:var(--ink)}
+  .gua-row.top .gname .cn{color:#fff}
+  .gua-row.top .gname .en{color:var(--celadon)}
+  .gua-row.top .gprice{color:var(--celadon)}
+  .gua-row.top .gprice b{color:#fff}
+  .gua-row.top .gua-meter{background:rgba(255,255,255,.14)}
+  .gua-row.top .gua-meter>i{background:linear-gradient(90deg,var(--cinnabar-soft),#E3B23C)}
+  .gua-cap{font-family:var(--ff-mono);font-size:11px;color:var(--ink-faint);margin:15px 0 0;letter-spacing:.02em;line-height:1.6}
+  @media(max-width:640px){.gua-row{grid-template-columns:1fr;gap:9px}.gua-row .gprice{text-align:left}.gua-meter{order:3}}
+
+  /* ---------- 2026 renovation alert ---------- */
+  .alert{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;margin:26px 0 0;padding:18px 22px;background:#FBF1EE;border:1px solid rgba(178,58,46,.28);border-left:4px solid var(--cinnabar);border-radius:12px}
+  .alert .ai{font-family:var(--ff-mono);font-size:11px;font-weight:600;letter-spacing:.06em;color:#fff;background:var(--cinnabar);padding:5px 9px;border-radius:6px;white-space:nowrap;text-transform:uppercase}
+  .alert h4{margin:0 0 5px;font-family:var(--ff-display);font-weight:600;font-size:18px;color:var(--ink)}
+  .alert p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+  @media(max-width:560px){.alert{grid-template-columns:1fr}}
+
+  /* ---------- weighted quality scorecard ---------- */
+  .scorecard{display:flex;flex-direction:column;gap:8px;margin:6px 0 0}
+  .sc-row{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:center;padding:12px 16px;border:1px solid rgba(27,38,32,.1);border-radius:10px;background:#fff}
+  .sc-row .pts{font-family:var(--ff-display);font-weight:600;font-size:25px;color:var(--jade);text-align:center;line-height:1}
+  .sc-row .pts small{display:block;font-family:var(--ff-mono);font-size:8.5px;letter-spacing:.08em;color:var(--ink-faint);text-transform:uppercase;margin-top:3px}
+  .sc-row .scd b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:1px}
+  .sc-row .scd span{font-size:13px;color:var(--ink-soft);line-height:1.5}
+  .sc-rule{margin:14px 0 0;font-family:var(--ff-mono);font-size:12px;color:var(--cinnabar);letter-spacing:.01em}
+
+  /* ---------- serious-buyer scripts ---------- */
+  .scripts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:8px 0 0}
+  @media(max-width:720px){.scripts{grid-template-columns:1fr}}
+  .scriptcard{padding:16px 18px;border:1px solid rgba(27,38,32,.1);border-radius:12px;background:var(--celadon-wash)}
+  .scriptcard .sh{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--jade);margin-bottom:8px}
+  .scriptcard .zh{font-family:var(--ff-cn-sans);font-size:15px;color:var(--ink);line-height:1.65;margin:0 0 7px}
+  .scriptcard .en{font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin:0}
+
+  /* ---------- photographs (hotlinked, Creative Commons) ---------- */
+  figure.photo{margin:26px 0 0;border-radius:14px;overflow:hidden;border:1px solid rgba(27,38,32,.12);background:var(--celadon-wash)}
+  figure.photo img{display:block;width:100%;height:auto;max-height:440px;object-fit:cover}
+  figure.photo figcaption{font-family:var(--ff-mono);font-size:11px;color:var(--ink-faint);padding:9px 15px;letter-spacing:.01em;line-height:1.55}
+  figure.photo figcaption a{color:var(--jade);text-decoration:none}
+  figure.photo figcaption a:hover{color:var(--cinnabar)}
+
+  :focus-visible{outline:2px solid var(--cinnabar);outline-offset:3px;border-radius:3px}
+
+  /* reveal — visible by default; animation only engages when JS adds .reveal-on (so content is never hidden if scripts don't run) */
+  .rv{opacity:1;transform:none}
+  html.reveal-on .rv{opacity:0;transform:translateY(16px)}
+  html.reveal-on .rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  @media (prefers-reduced-motion:reduce){html.reveal-on .rv{opacity:1!important;transform:none!important}}
+</style>
+<script>document.documentElement.classList.add('reveal-on');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to guide</a>
+<div class="progress" id="progress"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="cn">虎丘</span><span class="en">Field Guide</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#orient">Where</a>
+      <a href="#map">The Map</a>
+      <a href="#houses">The Houses</a>
+      <a href="#budget">Every Budget</a>
+      <a href="#attire">Other Attire</a>
+      <a href="#judge">Judging</a>
+      <a href="#chinese">Chinese Bridal</a>
+      <a href="#custom">Made-to-Measure</a>
+      <a href="#money">The Money</a>
+      <a href="#fitting">Fitting Room</a>
+      <a href="#visit">Visit</a>
+      <a href="#shipping">Shipping</a>
+      <a href="#plan">Game Plan</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="padding-block:0;padding-top:clamp(40px,7vw,84px)">
+  <div class="veil"></div>
+  <div class="wrap hero-in">
+    <div class="kicker">A field guide to the wedding-dress capital · <b>苏州 · Suzhou</b> · for first-timers</div>
+    <h1>Huqiu<br>Wedding City<span class="cnbig">虎丘婚纱城</span></h1>
+    <p class="deck">The single largest place on earth to buy a wedding dress — and one of the most confusing. This guide works the whole market for you: where the <b>design-led, couture-grade houses</b> hide, how to shop the <b>value floors</b> without getting burned, and what every budget — from a few hundred yuan to tens of thousands — actually buys.</p>
+
+    <div class="ledger" aria-label="Key facts">
+      <div><div class="fig">~70%</div><div class="cap">of China's bridal gowns<a class="c" href="#s3">3</a></div></div>
+      <div><div class="fig">300,000<span style="font-size:.5em"> m²</span></div><div class="cap">≈ 42 football pitches<a class="c" href="#s5">5</a><a class="c" href="#s1">1</a><a class="c" href="#s27">27</a></div></div>
+      <div><div class="fig">400+</div><div class="cap">name-brand stores<a class="c" href="#s1">1</a><a class="c" href="#s27">27</a></div></div>
+      <div><div class="fig">2015</div><div class="cap">complex opened<a class="c" href="#s2">2</a></div></div>
+    </div>
+
+    <p class="usenote">Read top-to-bottom before you travel, or jump to a section. Bilingual throughout — shop and fabric names are given in 中文 so you can point, search, and ask. Last updated June 2026; verify current shop unit numbers before you go.</p>
+  </div>
+</section>
+
+<!-- ================= ORIENT ================= -->
+<section id="orient">
+  <div class="wrap">
+    <div class="sec-head narrow rv">
+      <div class="eyebrow"><span class="num">§01</span> Where you actually are</div>
+      <h2>One name, two very different places</h2>
+      <p class="dek">Before anything else, get this straight — it is the mistake that wastes a whole day.</p>
+    </div>
+
+    <div class="narrow rv">
+      <p>Suzhou's Huqiu (虎丘, "Tiger Hill") district is the heart of the global wedding-dress trade. It began in the 1980s when a retired photographer opened a single bridal studio below the Tiger Hill pagoda; by the 1990s the lanes held close to a thousand workshops, and the place became the largest bridal production base in China and Southeast Asia.<a class="c" href="#s3">3</a><a class="c" href="#s29">29</a> Roughly <strong>70% of every wedding dress made in China</strong> still passes through here<a class="c" href="#s3">3</a> — international reporting puts it even higher, with a widely-cited BBC figure of up to 80% of the <em>world's</em> wedding dresses<a class="c" href="#s28">28</a><a class="c" href="#s30">30</a> — and a startling number of global brands were born on these racks: the founders of SHEIN, and the bridal e-commerce giants LightInTheBox and JJ's House, all got their start reselling Huqiu gowns abroad, where a $2,000 gown could go for as little as $200.<a class="c" href="#s3">3</a><a class="c" href="#s4">4</a><a class="c" href="#s30">30</a></p>
+      <figure class="photo rv">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/20090926_Suzhou_Yunyan_Pagoda_6094.jpg/1000px-20090926_Suzhou_Yunyan_Pagoda_6094.jpg" alt="The leaning Tiger Hill (Yunyan) Pagoda in Suzhou — the thousand-year-old landmark that gives the Huqiu wedding district its name." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+        <figcaption>虎丘塔 — the thousand-year-old leaning pagoda the district is named for; the first bridal studios opened in the lanes below it. Photo via <a href="https://commons.wikimedia.org/wiki/Category:Tiger_Hill,_Suzhou" target="_blank" rel="noopener">Wikimedia Commons</a> (Creative Commons).</figcaption>
+      </figure>
+      <p>After major fire-safety clearances around 2017–2018, the cramped old workshops were largely demolished and the trade consolidated into a purpose-built, state-run complex.<a class="c" href="#s3">3</a><a class="c" href="#s6">6</a> So today the name <span class="pull">"Huqiu"</span> points at two things, and only one of them is where you want to be:</p>
+    </div>
+
+    <div class="vs rv">
+      <div class="card">
+        <span class="tag t-old">Mostly gone · legacy</span>
+        <h3><span class="cn">虎丘婚纱一条街</span><br>The Old Street</h3>
+        <ul>
+          <li>The original maze of "shop-front, workshop-behind" houses along 虎丘路, arranged in 非-shaped alleys.</li>
+          <li>Cheapest prices, hardest haggling, thinnest materials — the wholesale floor.</li>
+          <li>Largely cleared in the 2017–18 safety crackdown; most good names relocated into the new complex.<a class="c" href="#s3">3</a><a class="c" href="#s6">6</a></li>
+          <li>Not your destination for a high-end gown.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag t-new">Go here · the complex</span>
+        <h3><span class="cn">虎丘婚纱城</span><br>Huqiu Wedding City</h3>
+        <ul>
+          <li>A ¥2.7-billion, 300,000 m², four-storey complex south of Tiger Hill — climate-controlled, 2,000+ free parking spaces.<a class="c" href="#s1">1</a><a class="c" href="#s2">2</a></li>
+          <li>State-built to push the industry toward <strong>brands, original design, and regulation</strong> — which is exactly what a high-end buyer wants.<a class="c" href="#s3">3</a></li>
+          <li>400+ established brands, from factory outlets to fashion-week designer houses, under one roof.<a class="c" href="#s1">1</a><a class="c" href="#s27">27</a></li>
+          <li><strong>This is the guide's subject. Address: 虎阜路999号.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="verdict narrow rv">
+      <p style="margin:0"><b>The rule:</b> ignore "the street," go to "the City," and within the City, walk straight to the villa zone. The next section shows you the floor plan.</p>
+    </div>
+
+    <div class="alert narrow rv">
+      <span class="ai">2026 alert</span>
+      <div>
+        <h4>C区 is being renovated this year — call ahead</h4>
+        <p>An official tender published in January 2026 covers a comprehensive overhaul of <strong>A区's cylinder building and C区 buildings C1–C12</strong> (façades, walkways, landscaping and public spaces).<a class="c" href="#s23">23</a> Because C区 is exactly where the high-end houses sit, expect entrances, shop units, or hours to shift during the works. Confirm each brand's <strong>current location and whether it's open</strong> on WeChat or 大众点评 before you travel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAP (signature) ================= -->
+<section id="map" class="map-sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§02</span> Read the floor before you walk it</div>
+      <h2>The map of the City</h2>
+      <p class="dek">The complex is laid out by price and prestige. High-end lives in <strong>Zone C — the villa street</strong>. Memorise this and you can skip 80% of the floor.</p>
+    </div>
+
+    <div class="mapframe rv">
+      <svg class="map-svg" viewBox="0 0 1000 520" role="img" aria-label="Schematic floor plan of Huqiu Wedding City showing zones A, B, C and D, with Zone C the high-end villa street highlighted.">
+        <defs>
+          <pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="9" stroke="rgba(27,38,32,.16)" stroke-width="2"/>
+          </pattern>
+          <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="rgba(27,38,32,.18)"/>
+          </filter>
+        </defs>
+
+        <!-- frame label -->
+        <text x="20" y="32" font-family="Spline Sans Mono, monospace" font-size="12" letter-spacing="3" fill="#7A847C">虎丘婚纱城 · SCHEMATIC · NOT TO SCALE</text>
+
+        <!-- Tiger Hill marker (north) -->
+        <g transform="translate(815,28)">
+          <path d="M0 34 L14 6 L28 34 Z" fill="none" stroke="#39654F" stroke-width="1.6"/>
+          <line x1="14" y1="6" x2="14" y2="-4" stroke="#39654F" stroke-width="1.6"/>
+          <circle cx="14" cy="-7" r="2.4" fill="#B23A2E"/>
+          <text x="40" y="20" font-family="Spline Sans Mono, monospace" font-size="11" fill="#7A847C">TIGER HILL</text>
+          <text x="40" y="34" font-family="Noto Serif SC, serif" font-size="12" fill="#7A847C">虎丘塔 · ~1 km N</text>
+        </g>
+
+        <!-- ZONE A -->
+        <g filter="url(#soft)">
+          <rect x="40" y="70" width="250" height="250" rx="12" fill="#FBFCF9" stroke="rgba(27,38,32,.26)" stroke-width="1.4"/>
+        </g>
+        <text x="60" y="108" font-family="Fraunces, serif" font-weight="600" font-size="46" fill="#1B2620">A</text>
+        <text x="60" y="132" font-family="Noto Serif SC, serif" font-weight="600" font-size="15" fill="#4C574F">婚嫁购物中心</text>
+        <text x="60" y="152" font-family="Spline Sans Mono, monospace" font-size="10.5" letter-spacing="1" fill="#7A847C">SHOPPING CENTRE</text>
+        <text x="60" y="178" font-family="Hanken Grotesk, sans-serif" font-size="13" fill="#4C574F">Brand floor + sunken plaza,</text>
+        <text x="60" y="196" font-family="Hanken Grotesk, sans-serif" font-size="13" fill="#4C574F">café &amp; food court. Some</text>
+        <text x="60" y="214" font-family="Hanken Grotesk, sans-serif" font-size="13" fill="#4C574F">strong houses on level 1.</text>
+        <!-- sunken plaza glyph -->
+        <rect x="60" y="236" width="210" height="62" rx="8" fill="url(#hatch)" stroke="rgba(27,38,32,.2)" stroke-dasharray="4 4"/>
+        <text x="165" y="272" text-anchor="middle" font-family="Noto Sans SC, sans-serif" font-size="12" fill="#5b655d">下沉广场 · plaza / 美食</text>
+
+        <!-- ZONE B -->
+        <g filter="url(#soft)">
+          <rect x="312" y="70" width="300" height="250" rx="12" fill="#FBFCF9" stroke="rgba(27,38,32,.26)" stroke-width="1.4"/>
+        </g>
+        <text x="332" y="108" font-family="Fraunces, serif" font-weight="600" font-size="46" fill="#1B2620">B</text>
+        <text x="332" y="132" font-family="Noto Serif SC, serif" font-weight="600" font-size="15" fill="#4C574F">婚嫁购物中心</text>
+        <text x="332" y="152" font-family="Spline Sans Mono, monospace" font-size="10.5" letter-spacing="1" fill="#7A847C">THE BIG MALL</text>
+        <!-- B1 B2 B3 stacks -->
+        <g>
+          <rect x="332" y="170" width="84" height="128" rx="7" fill="#E2EBE3" stroke="rgba(27,38,32,.18)"/>
+          <text x="374" y="210" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="13" fill="#39654F">B1</text>
+          <text x="374" y="290" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="10.5" fill="#5b655d">busiest</text>
+          <rect x="424" y="170" width="84" height="128" rx="7" fill="#E2EBE3" stroke="rgba(27,38,32,.18)"/>
+          <text x="466" y="210" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="13" fill="#39654F">B2</text>
+          <text x="466" y="290" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="10.5" fill="#5b655d">mid value</text>
+          <rect x="516" y="170" width="80" height="128" rx="7" fill="#F2F4EF" stroke="rgba(27,38,32,.18)"/>
+          <text x="556" y="210" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="13" fill="#39654F">B3</text>
+          <text x="556" y="290" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="10.5" fill="#5b655d">quiet · gems</text>
+        </g>
+        <text x="332" y="166" font-family="Hanken Grotesk, sans-serif" font-size="12" fill="#4C574F">Floors rise = prices fall. Level 1 priciest.</text>
+
+        <!-- connector note -->
+        <text x="305" y="350" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="10" letter-spacing="1" fill="#9aa39b">— zones connect on levels 2–4 —</text>
+
+        <!-- ZONE C : highlighted villa street -->
+        <g filter="url(#soft)">
+          <rect x="636" y="70" width="324" height="250" rx="14" fill="#39654F"/>
+        </g>
+        <rect x="636" y="70" width="324" height="250" rx="14" fill="none" stroke="#B23A2E" stroke-width="2.5"/>
+        <text x="658" y="110" font-family="Fraunces, serif" font-weight="600" font-size="46" fill="#ffffff">C</text>
+        <text x="658" y="134" font-family="Noto Serif SC, serif" font-weight="600" font-size="15" fill="#CBDBCF">婚尚体验步行街</text>
+        <text x="658" y="154" font-family="Spline Sans Mono, monospace" font-size="10.5" letter-spacing="1.5" fill="#9fc0ad">THE VILLA STREET</text>
+        <!-- villa units -->
+        <g>
+          <rect x="658" y="176" width="60" height="58" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+          <rect x="726" y="176" width="60" height="58" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+          <rect x="794" y="176" width="60" height="58" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+          <rect x="862" y="176" width="78" height="58" rx="6" fill="#5E8A73" stroke="#fff" stroke-width="1.6"/>
+          <text x="901" y="200" text-anchor="middle" font-family="Noto Serif SC, serif" font-weight="700" font-size="14" fill="#fff">绝设</text>
+          <text x="901" y="218" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="8.5" fill="#dCEAdf">JUSERE</text>
+          <rect x="658" y="244" width="60" height="56" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+          <rect x="726" y="244" width="60" height="56" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+          <rect x="794" y="244" width="60" height="56" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+          <rect x="862" y="244" width="78" height="56" rx="6" fill="#4f7a64" stroke="rgba(255,255,255,.35)"/>
+        </g>
+        <text x="658" y="172" font-family="Hanken Grotesk, sans-serif" font-size="12" fill="#CBDBCF">Standalone villas · designer houses · 高级定制</text>
+        <!-- HIGH-END flag -->
+        <g transform="translate(636,52)">
+          <rect x="0" y="0" width="168" height="26" rx="13" fill="#B23A2E"/>
+          <text x="84" y="17" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="11" letter-spacing="2" fill="#fff">◆ YOU WANT TO BE HERE</text>
+        </g>
+
+        <!-- ZONE D under construction -->
+        <rect x="636" y="338" width="324" height="64" rx="10" fill="url(#hatch)" stroke="rgba(27,38,32,.22)" stroke-dasharray="6 5"/>
+        <text x="658" y="364" font-family="Fraunces, serif" font-weight="600" font-size="22" fill="#7A847C">D</text>
+        <text x="690" y="362" font-family="Noto Serif SC, serif" font-size="13" fill="#7A847C">会展休闲中心</text>
+        <text x="690" y="380" font-family="Spline Sans Mono, monospace" font-size="10" letter-spacing="1" fill="#9aa39b">CONVENTION · UNDER CONSTRUCTION</text>
+
+        <!-- entrance + road -->
+        <line x1="40" y1="440" x2="960" y2="440" stroke="rgba(27,38,32,.3)" stroke-width="2"/>
+        <text x="40" y="464" font-family="Noto Sans SC, sans-serif" font-size="12" fill="#7A847C">虎阜路 · Hufu Road (main entrance &amp; drop-off)</text>
+        <g transform="translate(300,428)">
+          <path d="M0 12 L24 12 M24 12 L17 5 M24 12 L17 19" stroke="#B23A2E" stroke-width="2" fill="none"/>
+        </g>
+        <text x="500" y="500" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="10.5" letter-spacing="2" fill="#9aa39b">START AT C · COMPARE IN B · CHECK A · SKIP THE REST</text>
+      </svg>
+
+      <div class="map-legend">
+        <div class="leg"><span class="sw" style="background:#39654F"></span><div><b class="cn">C 区 · 步行街</b> <span class="en">High-end</span><p>Standalone villas. Designer houses with in-house R&amp;D, exclusive pieces, fashion-week pedigree and haute couture (高级定制). Typically ¥5k–¥10k+. Your first stop.<a class="c" href="#s7">7</a><a class="c" href="#s4">4</a></p></div></div>
+        <div class="leg"><span class="sw" style="background:#E2EBE3"></span><div><b class="cn">B 区 · 大商场</b> <span class="en">Mid · value</span><p>The big mall (B1/B2/B3). Strong ready-made and semi-custom. Ground floor priciest; upper floors cheaper. Good for comparison and back-up options.</p></div></div>
+        <div class="leg"><span class="sw" style="background:#FBFCF9"></span><div><b class="cn">A 区 · 综合</b> <span class="en">Brands + amenities</span><p>Mixed brand floor with a sunken plaza, café and food court. A few serious houses on level 1; upper levels lean wholesale.</p></div></div>
+        <div class="leg"><span class="sw" style="background:#CBC9C0"></span><div><b class="cn">D 区</b> <span class="en">Not open</span><p>Convention &amp; leisure centre, still under construction. Nothing to shop yet.</p></div></div>
+      </div>
+    </div>
+
+    <figure class="photo rv">
+      <img src="https://www.westchinago.com/wp-content/uploads/2023/03/huqiu-wedding-city-20230304.jpg" alt="The exterior of Huqiu Wedding City, the purpose-built state-run bridal complex in Suzhou." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>The complex itself — 300,000 m² across four floors plus two basement levels, just south of Tiger Hill. Photo via <a href="https://www.westchinago.com/suzhou-huqiu-wedding-city" target="_blank" rel="noopener">WestChinaGo</a>.</figcaption>
+    </figure>
+
+    <div class="zones rv">
+      <div class="zone-row hot">
+        <div class="zcode">C<small>步行街 villa</small></div>
+        <div class="zd"><b>The destination.</b> Detached villa shops, each a designer brand. Original collections you won't see copied next door; couture service; the highest quality — and the highest prices. Browse here first so your eye is calibrated before you look anywhere else.<a class="c" href="#s7">7</a><a class="c" href="#s6">6</a></div>
+        <div class="ztag hi">High-end</div>
+      </div>
+      <div class="zone-row">
+        <div class="zcode">A<small>综合 mixed</small></div>
+        <div class="zd">Brand floor + amenities. Worth a pass for the level-1 houses and to rest/eat at the sunken plaza. Upper floors are mostly wholesale and skippable for a retail buyer.<a class="c" href="#s7">7</a></div>
+        <div class="ztag mid">Selective</div>
+      </div>
+      <div class="zone-row">
+        <div class="zcode">B<small>商场 mall</small></div>
+        <div class="zd">Three connected buildings, the busiest part of the complex. Excellent for comparison shopping and mid-tier finds. Remember: <b>higher floor = lower price</b>, and B3 is quiet enough to hide some good designer studios.<a class="c" href="#s10">10</a><a class="c" href="#s8">8</a></div>
+        <div class="ztag mid">Compare</div>
+      </div>
+      <div class="zone-row">
+        <div class="zcode">D<small>会展 expo</small></div>
+        <div class="zd">Convention/leisure wing, under construction. (An older "E" wing on the periphery never really took off either.) Nothing to buy here for now.</div>
+        <div class="ztag lo">Skip</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOUSES ================= -->
+<section id="houses">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§03</span> The houses worth your time</div>
+      <h2>The high-end names</h2>
+      <p class="dek">These are the design-led, quality-first houses that come up again and again across Zhihu, Xiaohongshu and the trade press. Treat them as your shortlist — then verify the exact unit on 大众点评 or the shop's WeChat before you walk, because units move. <em>Not chasing couture? §04 maps the value floors and every other budget.</em></p>
+    </div>
+
+    <figure class="photo rv">
+      <img src="https://i0.wp.com/rachelmeetschina.com/wp-content/uploads/2024/08/img_6307.jpg?w=1200&amp;ssl=1" alt="Inside Huqiu Wedding City — rows of bridal shopfronts and gowns on display." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>Inside the City — a fraction of the hundreds of shopfronts you'll walk in a day. Photo via <a href="https://rachelmeetschina.com/2024/08/26/suzhous-wedding-dress-market-the-largest-bridal-shopping-destination-in-china/" target="_blank" rel="noopener">Rachel Meets China</a>.</figcaption>
+    </figure>
+
+    <div class="shops rv">
+
+      <div class="card dossier flag">
+        <div class="top">
+          <div><div class="name">绝设</div><div class="rom">JUSERE · since 2002</div></div>
+          <span class="flagpill">★ Flagship</span>
+        </div>
+        <p class="gloss">Widely called Suzhou's number-one bridal brand. In-house design team, six appearances at China International Fashion Week, three designers named "China Top-Ten Fashion Designer," and exports to over 30 countries.<a class="c" href="#s14">14</a><a class="c" href="#s15">15</a><a class="c" href="#s16">16</a><a class="c" href="#s32">32</a> The benchmark for original design and finish — this is where you calibrate "what good looks like." Sister label <strong>天玺 (Tianxi)</strong> handles Chinese 秀禾/旗袍.<a class="c" href="#s14">14</a><a class="c" href="#s32">32</a></p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>C 区 · standalone (multi-floor experience store)<a class="c" href="#s17">17</a></dd>
+          <dt>Known for</dt><dd>Original couture, dramatic trains, impeccable beadwork</dd>
+          <dt>Price band</dt><dd>¥5,000 – ¥10,000+ · holds price, little haggling<a class="c" href="#s16">16</a></dd>
+          <dt>Note</dt><dd>Appointment advised; they do trial hair/makeup. Also an export-standard showroom near Suzhou Station HQ (<span class="cn">虎林路62号</span>)<a class="c" href="#s13">13</a><a class="c" href="#s11">11</a></dd>
+        </dl>
+      </div>
+
+      <div class="card dossier flag">
+        <div class="top">
+          <div><div class="name">优兰达</div><div class="rom">Youlanda</div></div>
+          <span class="flagpill">★ Designer</span>
+        </div>
+        <p class="gloss">A C-zone original-design house that recurs in buyer write-ups alongside the marquee names, with a made-to-measure program and frequent new collections. Worth a look as a high-design alternative if JUSERE isn't your aesthetic — but this is one to <strong>confirm on 大众点评/小红书 before relying on it</strong>, as it's less documented than the flagship.</p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>C 区 · villa street</dd>
+          <dt>Known for</dt><dd>Contemporary original design, custom service</dd>
+          <dt>Price band</dt><dd>¥5,000 – ¥10,000+ · some festival offers</dd>
+          <dt>Note</dt><dd>Custom fee sometimes waived during promotions</dd>
+        </dl>
+      </div>
+
+      <div class="card dossier flag">
+        <div class="top">
+          <div><div class="name">丹妮斯</div><div class="rom">DENISE</div></div>
+          <span class="flagpill">★ Designer</span>
+        </div>
+        <p class="gloss">A Suzhou-grown couture house whose founder chaired the national bridalwear association; the brand runs its own collections, star dressing and overseas distribution.<a class="c" href="#s24">24</a> It's named among the C-zone designer brands alongside JUSERE,<a class="c" href="#s26">26</a> and one industry insider now rates it "near the top tier."<a class="c" href="#s25">25</a> A serious alternative to JUSERE for original, high-finish gowns — confirm the current unit, as C区 is mid-renovation.</p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>C 区 · designer cluster</dd>
+          <dt>Known for</dt><dd>Original couture &amp; evening wear, star clients</dd>
+          <dt>Price band</dt><dd>High-end · couture territory</dd>
+          <dt>Note</dt><dd>Appointment-style brand; verify current C区 location during the 2026 works</dd>
+        </dl>
+      </div>
+
+      <div class="card dossier">
+        <div class="top">
+          <div><div class="name">圣利亚</div><div class="rom">Shengliya</div></div>
+        </div>
+        <p class="gloss">An established name a few doors from JUSERE in the C-zone cluster — and, per buyer accounts, JUSERE staff will often walk you over to it as the more affordable sibling. Solid quality for the money: one buyer was quoted just over ¥2,000 for an off-shoulder floor-length gown. A sensible step-down if the flagship's couture pricing is out of range — though note that one industry insider reckons its standing has slipped in recent years, so judge the current garments on their own merits.<a class="c" href="#s16">16</a><a class="c" href="#s25">25</a></p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>C 区 cluster · near JUSERE</dd>
+          <dt>Known for</dt><dd>Good value, dependable make</dd>
+          <dt>Price band</dt><dd>Upper-mid · gowns from ≈¥2,000</dd>
+          <dt>Note</dt><dd>Layout has shifted over the years — verify the current unit</dd>
+        </dl>
+      </div>
+
+      <div class="card dossier">
+        <div class="top">
+          <div><div class="name">满庭芳</div><div class="rom">MTF · Mantingfang</div></div>
+        </div>
+        <p class="gloss">Beloved for pattern-making and fit — the rare house that grades length as well as size. Semi-original collections at a notch below couture pricing, with a deep online presence. A strong "design-forward but not five-figure" pick. (Watch for copied "爆款" styles creeping in; favour their own designs.)</p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>B 区 · reported B2 level 1, unit 118<a class="c" href="#s12">12</a></dd>
+          <dt>Known for</dt><dd>Excellent cut &amp; drape, satin gowns</dd>
+          <dt>Price band</dt><dd>¥2,000 – ¥6,000 · custom +~10%</dd>
+          <dt>Note</dt><dd>Multiple online sub-stores — compare pricing</dd>
+        </dl>
+      </div>
+
+      <div class="card dossier">
+        <div class="top">
+          <div><div class="name">婉纱仙妮</div><div class="rom">West Sunny</div></div>
+        </div>
+        <p class="gloss">One of the old guard from the original street, known for beautifully draping gowns and prestige positioning.<a class="c" href="#s9">9</a><a class="c" href="#s16">16</a> A heritage label worth seeing for classic, fluid silhouettes — service can run cool, and you'll pay for the name, so judge the garment in hand.</p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>A 区 · brand floor</dd>
+          <dt>Known for</dt><dd>Fluid drape, classic silhouettes</dd>
+          <dt>Price band</dt><dd>Upper-mid to high</dd>
+          <dt>Note</dt><dd>Legacy prestige brand; inspect finishing closely</dd>
+        </dl>
+      </div>
+
+      <div class="card dossier">
+        <div class="top">
+          <div><div class="name">GUZI · 故事37</div><div class="rom">Designer studios</div></div>
+        </div>
+        <p class="gloss">Representative of the smaller <strong>designer studios</strong> dotted through B3 and the villa street — the kind of independent, original-design rooms where you find a piece that exists nowhere else. <em>GUZI</em> is a named designer label in the City; <em>Story 37 (故事37)</em> and similar studios trade design personality for a friendlier price. Hunt these out once the marquee houses have set your reference point.</p>
+        <dl class="meta">
+          <dt>Zone</dt><dd>B3 / C · independent studios</dd>
+          <dt>Known for</dt><dd>One-off original design, character</dd>
+          <dt>Price band</dt><dd>¥2,000 – ¥5,000</dd>
+          <dt>Note</dt><dd>Names &amp; units change fastest here — search first</dd>
+        </dl>
+      </div>
+
+    </div>
+
+    <div class="tip rv">
+      <div class="l">Reality check before you commit the trip</div>
+      <p>Several seasoned buyers make an honest point: if you live in a tier-1 city <em>and</em> your budget is genuinely high-end, the saving on a five-figure couture gown over a good local atelier can be modest once you add travel and remote alterations.<a class="c" href="#s16">16</a> Huqiu's edge is unbeatable at the <strong>upper-mid to lower-high band</strong> (≈¥2k–¥6k), in <strong>selection</strong> (hundreds of original designers in one walk), and in <strong>Chinese bridalwear</strong> (秀禾/龙凤褂). Go for the range and the design depth — not only the discount.</p>
+    </div>
+
+    <div class="spot rv">
+      <div class="eyebrow">Field skill</div>
+      <h3>How to spot a high-design house yourself</h3>
+      <p>Names change; this instinct doesn't. In a sea of near-identical white storefronts, the serious rooms give themselves away:</p>
+      <ol>
+        <li><b>It's a standalone villa, or a large ground-floor flagship.</b> Rent tracks prestige here — the best houses pay for the front and the freestanding buildings, exactly like any mall.</li>
+        <li><b>The pieces aren't repeated three stalls down.</b> Ask outright: <span class="cn">"这是原创吗？"</span> Exclusive, in-house design is the whole point of paying up. Viral "爆款" copies appear everywhere.</li>
+        <li><b>There's a try-on fee, and they ask you to remove your shoes.</b> Slightly annoying, genuinely a signal — a room protecting heavy hand-beaded samples is a room with heavy hand-beaded samples.</li>
+        <li><b>The staff style you, not just sell to you.</b> At a real house the consultant reads your frame, proposes silhouettes, and advises on hair, veil and accessories — a different experience from "what's your budget?"</li>
+        <li><b>Show pedigree is on the wall.</b> Fashion-week looks, lookbooks, designer credits. Worth confirming, but it's the tell that separates a brand from a booth.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUDGET ================= -->
+<section id="budget">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§04</span> The other 95% of the floor</div>
+      <h2>Shopping every budget — where the value lives</h2>
+      <p class="dek">The villa houses are the ceiling, not the whole building. The same complex runs from ¥300 racks to ¥30,000 couture — and the value end is where most brides actually buy. Here's how to work it without getting burned.</p>
+    </div>
+
+    <p class="lead rv" style="margin-bottom:26px">One rule organises the entire mall: <strong>frontage costs money, height saves it</strong>. The branded ground-floor shopfronts pay the highest rent and quote the highest prices; walk up a level, or over to the quieter buildings, and the same gown drops.<a class="c" href="#s8">8</a><a class="c" href="#s26">26</a></p>
+
+    <figure class="photo rv">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Wedding_Shop_in_Huqiu.jpg/1200px-Wedding_Shop_in_Huqiu.jpg" alt="A wedding-dress shop packed wall-to-wall with white gowns inside the Huqiu market in Suzhou." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>Inside a wedding-dress shop at Huqiu — racks packed wall to wall, the everyday reality of the value floors. Suzhou, via <a href="https://commons.wikimedia.org/wiki/Category:2010s_wedding_dresses" target="_blank" rel="noopener">Wikimedia Commons</a> (Creative Commons).</figcaption>
+    </figure>
+
+    <div class="zones rv">
+      <div class="zone-row">
+        <div class="zcode">B2·3<small>value core</small></div>
+        <div class="zd"><b>The heart of value buying.</b> B区 is wholesale-and-retail, most quotes under ¥5,000, with real bargains to be hunted. Because B1 sits outermost and draws the crowds, <strong>B2 and B3 run cheaper for the same dress</strong> — start there.<a class="c" href="#s10">10</a><a class="c" href="#s8">8</a></div>
+      </div>
+      <div class="zone-row">
+        <div class="zcode">↑2F<small>go up to save</small></div>
+        <div class="zd"><b>The ground floor is the trap.</b> Everyone clusters on level 1, so level-1 prices stay high and stiff. Two floors up the same style is "much cheaper," and the newest, quietest merchants on <strong>3F</strong> have the softest prices of all — slow business negotiates.<a class="c" href="#s8">8</a><a class="c" href="#s26">26</a></div>
+      </div>
+      <div class="zone-row">
+        <div class="zcode">A3-4<small>factory floors</small></div>
+        <div class="zd"><b>The wholesale upper floors.</b> A区's 3rd–4th floors are former photo-studio spaces now let to dress makers — mostly wholesale, few retail brides, nothing high-end, but genuinely good value if you know what you're looking at.<a class="c" href="#s26">26</a></div>
+      </div>
+      <div class="zone-row">
+        <div class="zcode">B 4F<small>trimmings</small></div>
+        <div class="zd"><b>Everything that finishes the look.</b> The top floor of the B buildings is veils, accessories, children's wear and notions/fabric (辅料) — the support categories, at support-category prices.<a class="c" href="#s26">26</a></div>
+      </div>
+    </div>
+
+    <h3 class="rv" style="margin-top:46px;margin-bottom:14px">The move everyone who's done it recommends</h3>
+    <div class="vs rv">
+      <div class="card">
+        <span class="tag" style="background:var(--celadon-wash);color:var(--jade)">Step 1 · Calibrate in C</span>
+        <h3>Try in the villas</h3>
+        <ul>
+          <li>Book a C区 house on 大众点评 first — most let you try <strong>three pieces free</strong>, where a cold walk-in pays a 试纱费.<a class="c" href="#s33">33</a></li>
+          <li>Try three different <em>types</em> (satin vs tulle, off-shoulder vs one-shoulder) to learn what suits you — and what top-tier fabric and cut actually feel like.<a class="c" href="#s33">33</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag" style="background:var(--cinnabar-soft);color:var(--cinnabar)">Step 2 · Buy in B</span>
+        <h3>Then buy the look for less</h3>
+        <ul>
+          <li>Take the silhouette you fell for into the B-zone value floors and find it — or its near-twin — for a fraction of the villa price.<a class="c" href="#s33">33</a></li>
+          <li>Knowing your style up front makes you fast: regulars walk every B-zone shop in a day once they've stopped browsing blind.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="rv" style="margin-top:46px;margin-bottom:14px">Buy, or rent?</h3>
+    <div class="vs rv">
+      <div class="card">
+        <span class="tag" style="background:var(--celadon-wash);color:var(--jade)">Buy</span>
+        <h3>Keep it — the default</h3>
+        <ul>
+          <li>Value sweet spot: <strong>¥1,000–2,500</strong> for solid ready-made, <strong>¥2,500–4,000</strong> for design-forward — where most gowns land.<a class="c" href="#s31">31</a></li>
+          <li>You own it, can ship it, and can re-wear or resell. Best if you want the dress, not just the day.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag" style="background:var(--cinnabar-soft);color:var(--cinnabar)">Rent · 租赁</span>
+        <h3>Borrow the wardrobe</h3>
+        <ul>
+          <li>Rental shops do whole-wedding packages — real examples ran <strong>¥5,000 / ¥8,999 / ¥9,500 for four outfits plus a bridesmaid dress</strong>.<a class="c" href="#s33">33</a></li>
+          <li>Frees you from keeping or shipping gowns — handy when the in-laws are far or you want several looks in one day.<a class="c" href="#s33">33</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="narrow rv" style="margin-top:40px">
+      <h3 style="margin-bottom:4px">What sub-¥1,000 really buys</h3>
+      <p>Yes, there are ¥300–800 main gowns, and ¥500–600 秀禾 that photograph fine. But the fabric and finish are <strong>visibly a tier (or two) down</strong>, and every honest buyer says the same: for the gown you'll actually marry in, budget <strong>¥1,000–2,000 and up</strong>, and save the rock-bottom racks for an 出门纱 (arrival gown), a toasting change, or a photoshoot piece.<a class="c" href="#s11">11</a> If you want the genuinely cheapest — think ¥1,000 for three pieces — that lives on the old <strong>wedding street (老街)</strong>, not in the air-conditioned mall; most of those sellers have moved into the City anyway, so only make the trip if cheapest-possible is the entire point.<a class="c" href="#s7">7</a></p>
+    </div>
+
+    <h3 class="rv" style="margin-top:44px;margin-bottom:14px">A few value names to start with</h3>
+    <div class="terms rv">
+      <div class="term"><div class="h"><span class="zh">故事37 · GUZI</span><span class="py">A 区</span></div><div class="en">Value designer</div><p>Xiaohongshu-popular; deal sets seen around <strong>¥1,888 for three</strong> — a real step up from old-street ¥600-a-piece quality.<a class="c" href="#s7">7</a></p></div>
+      <div class="term"><div class="h"><span class="zh">朱恩弦</span><span class="py">B1 区</span></div><div class="en">Value ready-made</div><p>Long-running B-zone name (listed near B1 205/206/209 — verify the unit). Solid mid-budget racks.<a class="c" href="#s34">34</a></p></div>
+      <div class="term"><div class="h"><span class="zh">工匠婚纱体验馆</span><span class="py">A 区 1F</span></div><div class="en">Experience store</div><p>Big walk-in experience store on the A-zone ground floor — an easy first stop to gauge mid-range styles.<a class="c" href="#s34">34</a></p></div>
+      <div class="term"><div class="h"><span class="zh">批发型小店</span><span class="py">B 区 2–3F</span></div><div class="en">Cheap wholesale racks</div><p>Densely-hung shops quoting ¥1,000-ish (and bargainable lower). Bargains exist — but <strong>inspect fabric and finishing hard</strong>; this is where quality varies most.<a class="c" href="#s11">11</a></p></div>
+    </div>
+
+    <p class="rv muted narrow" style="margin-top:26px">For the price ladder in full, the ×0.28 wholesale rule and the haggling playbook, see <strong>§09 · The money game</strong>. The inspection vocabulary in <strong>§06</strong> matters even more at the value end, where corners get cut.</p>
+  </div>
+</section>
+
+<!-- ================= OTHER ATTIRE ================= -->
+<section id="attire">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§05</span> Not just the white gown</div>
+      <h2>Everything else under this roof</h2>
+      <p class="dek">A wedding needs a wardrobe, not a dress — and the City is built to clothe the whole party in one trip. Most of these follow the same value rules: brand frontage on level 1, cheaper and more wholesale as you climb.</p>
+    </div>
+
+    <p class="lead rv" style="margin-bottom:26px">The brand-and-amenities <strong>A区</strong> is the one-stop floor — gowns, evening wear, 旗袍, 秀禾, menswear, kids' wear, accessories and photo studios all sit here around a sunken plaza with cafés and a food court — while the <strong>B区 4th floor</strong> concentrates veils, accessories, children's wear and trimmings.<a class="c" href="#s7">7</a><a class="c" href="#s6">6</a></p>
+
+    <figure class="photo rv">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cheongsam_at_the_National_Museum_of_Singapore_-_20120406.jpg/800px-Cheongsam_at_the_National_Museum_of_Singapore_-_20120406.jpg" alt="A cheongsam (qipao) on display, showing the mandarin collar, frog fastenings and fitted one-piece cut." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>A cheongsam / 旗袍 — the fitted one-piece many brides change into for the tea ceremony and toasting; for the embroidered 秀禾服 and 龙凤褂, see §07. National Museum of Singapore, via <a href="https://commons.wikimedia.org/wiki/Category:Qipao" target="_blank" rel="noopener">Wikimedia Commons</a> (Creative Commons).</figcaption>
+    </figure>
+
+    <div class="terms rv">
+      <div class="term"><div class="h"><span class="zh">伴娘服</span><span class="py">bànniángfú</span></div><div class="en">Bridesmaid dresses</div><p>Coordinated sets in every palette, cheap enough to kit out the whole party — and often bundled into rental packages.<a class="c" href="#s34">34</a></p></div>
+      <div class="term"><div class="h"><span class="zh">晚礼服 · 敬酒服</span><span class="py">wǎnlǐfú · jìngjiǔfú</span></div><div class="en">Evening &amp; toasting gowns</div><p>The shorter, easy-to-move second dress for the banquet and table-toasting rounds — a category in its own right, with dedicated 礼服 shops.<a class="c" href="#s11">11</a></p></div>
+      <div class="term"><div class="h"><span class="zh">旗袍</span><span class="py">qípáo</span></div><div class="en">Qipao / cheongsam</div><p>The fitted one-piece, red-and-gold for weddings. For the embroidered 秀禾服 and 龙凤褂, see <strong>§07</strong>.<a class="c" href="#s7">7</a></p></div>
+      <div class="term"><div class="h"><span class="zh">男士西服 · 礼服</span><span class="py">nánshì xīfú</span></div><div class="en">Groom suits &amp; formalwear</div><p>Suits and tuxedos for the groom and the fathers — menswear (男装) is a standard A-zone category, so the whole party dresses in one trip.<a class="c" href="#s6">6</a></p></div>
+      <div class="term"><div class="h"><span class="zh">妈妈装</span><span class="py">māmāzhuāng</span></div><div class="en">Mother-of-the-bride</div><p>Dressy 中式 and Western looks for both mothers — easy to match to the couple's palette while you're already here.<a class="c" href="#s6">6</a></p></div>
+      <div class="term"><div class="h"><span class="zh">头纱 · 配饰 · 婚鞋</span><span class="py">tóushā · pèishì</span></div><div class="en">Veils, accessories, shoes</div><p>Veils, hairpieces, jewellery and wedding shoes — concentrated on the <strong>B区 4th floor</strong> and cheap; buy 胸贴 and basics online even cheaper before you travel.<a class="c" href="#s26">26</a></p></div>
+      <div class="term"><div class="h"><span class="zh">童装 · 花童</span><span class="py">tóngzhuāng</span></div><div class="en">Kids &amp; flower-girl</div><p>Flower-girl and page-boy outfits, also up on the B-zone 4th floor with the accessories and trims.<a class="c" href="#s26">26</a></p></div>
+      <div class="term"><div class="h"><span class="zh">婚纱照 · 旅拍</span><span class="py">hūnshāzhào · lǚpāi</span></div><div class="en">Photoshoot &amp; studios</div><p>Photo studios (影楼) and travel-shoot (旅拍) wardrobes share the A-zone — convenient if you're doing your pre-wedding shoot in Suzhou too.<a class="c" href="#s7">7</a></p></div>
+      <div class="term"><div class="h"><span class="zh">婚纱租赁</span><span class="py">hūnshā zūlìn</span></div><div class="en">Rental</div><p>Whole-wardrobe rental shops, if you'd rather borrow than keep — see the buy-or-rent split in <strong>§04</strong>.<a class="c" href="#s33">33</a></p></div>
+      <div class="term"><div class="h"><span class="zh">辅料</span><span class="py">fǔliào</span></div><div class="en">Trims &amp; fabric</div><p>Lace, beading, fabric and findings for makers and the trade — bought by the roll, on the B-zone 4th floor.<a class="c" href="#s26">26</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JUDGE ================= -->
+<section id="judge">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§06</span> Judging the dress</div>
+      <h2>Read fabric &amp; construction like a buyer</h2>
+      <p class="dek">Under the showroom's deliberately flattering lights every gown sparkles. Quality lives in the materials and the making — learn the vocabulary so you can ask precisely and inspect properly.</p>
+    </div>
+
+    <figure class="photo rv">
+      <img src="https://i0.wp.com/rachelmeetschina.com/wp-content/uploads/2024/08/img_6195.jpg?w=1200&amp;ssl=1" alt="Wedding gowns on display under bright showroom lighting inside Huqiu Wedding City." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>Under the showroom lights everything sparkles — which is exactly why you learn to read the materials and the making, not the shine. Photo via <a href="https://rachelmeetschina.com/2024/08/26/suzhous-wedding-dress-market-the-largest-bridal-shopping-destination-in-china/" target="_blank" rel="noopener">Rachel Meets China</a>.</figcaption>
+    </figure>
+
+    <h3 class="rv" style="margin-bottom:18px">The fabric &amp; silhouette glossary</h3>
+    <div class="terms rv">
+      <div class="term"><div class="h"><span class="zh">缎面</span><span class="py">duànmiàn</span></div><div class="en">Satin / mikado</div><p>Smooth, weighty, fluid. The classic mermaid fabric — elegant, but shows every line, so fit and undergarments matter.</p></div>
+      <div class="term"><div class="h"><span class="zh">欧根纱</span><span class="py">ōugēnshā</span></div><div class="en">Organza</div><p>Crisp and structured. Holds volume — the body behind big ballgown and princess skirts.</p></div>
+      <div class="term"><div class="h"><span class="zh">蕾丝</span><span class="py">lěisī</span></div><div class="en">Lace</div><p>Appliqué or all-over. The quality question: is it hand-applied and dimensional, or flat and glued on?</p></div>
+      <div class="term"><div class="h"><span class="zh">钉珠</span><span class="py">dīngzhū</span></div><div class="en">Beadwork</div><p>Beads &amp; crystals. Hand-beaded ("重工") is heavier, costlier and catches light far better than printed sparkle.</p></div>
+      <div class="term"><div class="h"><span class="zh">重工</span><span class="py">zhònggōng</span></div><div class="en">"Heavy work"</div><p>Dense handcraft — the single biggest legitimate driver of price at the high end. Heft is the giveaway.</p></div>
+      <div class="term"><div class="h"><span class="zh">鱼尾</span><span class="py">yúwěi</span></div><div class="en">Mermaid / fishtail</div><p>Fitted to the knee, then flares. Sculptural and demanding; satin shows the cut best.</p></div>
+      <div class="term"><div class="h"><span class="zh">拖尾</span><span class="py">tuōwěi</span></div><div class="en">Train</div><p>Length is a choice: a long 大拖尾 "holds the room" for a big hall; a short one suits movement and lawns.</p></div>
+      <div class="term"><div class="h"><span class="zh">齐地</span><span class="py">qídì</span></div><div class="en">Floor-length</div><p>No train — easy to walk in. Often the "出门纱," your get-around / arrival gown.<a class="c" href="#s10">10</a></p></div>
+      <div class="term"><div class="h"><span class="zh">主纱</span><span class="py">zhǔshā</span></div><div class="en">Main gown</div><p>The hero ceremony dress. The piece to spend your budget and your scrutiny on.</p></div>
+      <div class="term"><div class="h"><span class="zh">秀禾服</span><span class="py">xiùhéfú</span></div><div class="en">Xiuhe (Chinese)</div><p>Embroidered two-piece Chinese bridal. Huqiu is exceptional and well-priced here — see 天玺 and dedicated houses.</p></div>
+      <div class="term"><div class="h"><span class="zh">龙凤褂</span><span class="py">lóngfèngguà</span></div><div class="en">Dragon-phoenix gua</div><p>Densely embroidered jacket-and-skirt. Quality = stitch density and whether it's hand- or machine-worked.</p></div>
+      <div class="term"><div class="h"><span class="zh">敬酒服</span><span class="py">jìngjiǔfú</span></div><div class="en">Toasting dress</div><p>Lighter reception look for table rounds. Many brides buy main + toasting + Chinese as a set.</p></div>
+    </div>
+
+    <h3 class="rv" style="margin-top:48px;margin-bottom:6px">The hands-on quality check</h3>
+    <p class="rv muted narrow" style="margin-bottom:6px">Pick a sample up, turn it inside out, and run through this. A great house passes every line without flinching.</p>
+    <div class="tells rv">
+      <div class="tell"><span class="mk">✚</span><div><b>Heft &amp; beadwork</b><span>Real hand-beading is heavy and secured thread-by-thread. Gently tug a few beads — they shouldn't shed. Glue-dots and plastic sparkle are a downgrade tell.</span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Inside finishing</b><span>Turn it out. Look for clean bound or French seams, neat linings, no loose threads or raw edges. The inside is where corners get cut.</span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Boning &amp; structure (鱼骨)</b><span>A good bodice holds its shape and supports you without digging into the ribs or hips. Sit and bend in it before you decide.</span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Closures &amp; hem</b><span>Zip should glide; buttons and loops sit flat; the hem should be even all the way round, trains included.</span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Original vs copy</b><span>Ask "<span class="cn">原创吗？独家吗？</span>". An exclusive design justifies the price; a piece you can screenshot and find on Taobao for a third does not.</span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>See it in daylight</b><span>Showroom lights flatter and "anti-photo" lighting hides detail. Step toward a doorway or window to judge true colour (white vs 香槟 champagne vs ivory) and any flaws.</span></div></div>
+    </div>
+
+    <h3 class="rv" style="margin-top:48px;margin-bottom:4px">Put a number on it — the 100-point check</h3>
+    <p class="rv muted narrow" style="margin-bottom:18px">Score each finalist immediately after you take it off, while it's fresh. The weights tell you what actually matters at the high end: a luxurious showroom counts for nothing here. Anything under <strong>80</strong> isn't a high-end purchase, however it's priced.</p>
+    <div class="scorecard rv">
+      <div class="sc-row"><div class="pts">30<small>pts</small></div><div class="scd"><b>Design originality</b><span>Is it the brand's own design, a public-market "公版", a buyer-selected style, or a modified sample? Do the proportions feel intentional — not just "more beads"?</span></div></div>
+      <div class="sc-row"><div class="pts">25<small>pts</small></div><div class="scd"><b>Structure &amp; fit</b><span>Corset, boning, bust support, waist placement, zip/lacing, train balance — does it hold you up without tugging or collapsing?</span></div></div>
+      <div class="sc-row"><div class="pts">20<small>pts</small></div><div class="scd"><b>Materials &amp; handwork</b><span>Lace density, tulle softness, satin drape, lining comfort, bead anchoring, clean appliqué edges.</span></div></div>
+      <div class="sc-row"><div class="pts">15<small>pts</small></div><div class="scd"><b>Custom &amp; alterations</b><span>Exact measurements, heel height, bustle plan, train shortening, how many alteration rounds, and <em>who</em> does them.</span></div></div>
+      <div class="sc-row"><div class="pts">10<small>pts</small></div><div class="scd"><b>Contract &amp; aftercare</b><span>Style number, final fabric, lace/embroidery detail, sample photos, price, deposit, delivery date, pickup inspection, courier risk, repair policy.</span></div></div>
+    </div>
+    <p class="sc-rule rv">◆ Disqualifiers, at any price: they won't write the exact style/material/finish into the order · they promise the final gown is "basically the same" but won't document the sample · they push a big discount before they've understood your body, venue or date · loose threads, scratchy lining, a warped hem or shedding beads are waved off as "normal" · they can't say whether the design is original, licensed, buyer-selected or public-market stock.</p>
+  </div>
+</section>
+
+<!-- ================= CHINESE BRIDALWEAR ================= -->
+<section id="chinese">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§07</span> The Chinese gowns</div>
+      <h2>秀禾服, 龙凤褂 &amp; the art of 中式嫁衣</h2>
+      <p class="dek">Huqiu is one of the best places in China to buy Chinese bridalwear — but it runs on a quality language entirely separate from white gowns. Most brides now wear a Chinese piece for the door-leaving and toasting and a gown for the ceremony; many go fully 中式. Learn the vocabulary and you can read value at a glance.</p>
+    </div>
+
+    <div class="narrow rv">
+      <p>Two garments dominate, and newcomers constantly mix them up — and the difference isn't just decoration, it's two distinct embroidery traditions, cuts and price logics. Suzhou's heritage is <strong>苏绣 (Suzhou embroidery)</strong>, which makes the City especially strong on <strong>秀禾服</strong>; full 中式 ranges sit in many houses, including JUSERE's sister label <strong>天玺 (Tianxi)</strong>.<a class="c" href="#s10">10</a><a class="c" href="#s14">14</a></p>
+    </div>
+
+    <figure class="photo rv">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wedding_costume_in_midi_%28dense_embroidery%29_style%2C_view_1%2C_with_dragon-and-phoenix_patterns_-_Hong_Kong_Museum_of_History_-_DSC00951.JPG/1000px-Wedding_costume_in_midi_%28dense_embroidery%29_style%2C_view_1%2C_with_dragon-and-phoenix_patterns_-_Hong_Kong_Museum_of_History_-_DSC00951.JPG" alt="A dense-embroidery dragon-and-phoenix Chinese wedding gua (jacket-and-skirt) on display at the Hong Kong Museum of History." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>A dense-embroidery 龙凤褂 — raised gold dragon-and-phoenix work on red, the look the 褂 density ladder further down grades from 小五福 up to 褂皇. Hong Kong Museum of History, via <a href="https://commons.wikimedia.org/wiki/Category:Qungua" target="_blank" rel="noopener">Wikimedia Commons</a> (Creative Commons).</figcaption>
+    </figure>
+
+    <div class="vs rv">
+      <div class="card">
+        <span class="tag" style="background:var(--celadon-wash);color:var(--jade)">秀禾服 · 苏绣 / 平绣</span>
+        <h3><span class="cn">秀禾服</span><br>Xiùhé — the softer one</h3>
+        <ul>
+          <li><b>Flat embroidery</b> (平绣, usually 苏绣 or 潮绣) — the stitching sits level with the cloth, fine and painterly.<a class="c" href="#s20">20</a><a class="c" href="#s18">18</a></li>
+          <li><b>Free motifs &amp; colour:</b> not only dragon-phoenix — peony (wealth), bat ("luck arrives"), lily (harmony), on red, gold and beyond.<a class="c" href="#s19">19</a></li>
+          <li><b>Looser 马面裙 cut</b> flatters every figure; the wide skirt spreads beautifully for photos.<a class="c" href="#s20">20</a></li>
+          <li>The "小家碧玉" look — gentle and understated. The name was popularised by the 2001 drama 《橘子红了》.<a class="c" href="#s20">20</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag" style="background:rgba(178,58,46,.12);color:var(--cinnabar)">龙凤褂 · 粤绣 / 立体</span>
+        <h3><span class="cn">龙凤褂</span><br>Lóngfèng guà — the regal one</h3>
+        <ul>
+          <li><b>Raised 3-D embroidery</b> (卜心绣 / 钉金绣, Cantonese 粤绣) — gold/silver thread padded to stand off the cloth.<a class="c" href="#s19">19</a><a class="c" href="#s18">18</a></li>
+          <li><b>Must show dragon &amp; phoenix</b> in gold/silver on a red ground; the phoenix leads, the dragon is emphasised.<a class="c" href="#s19">19</a></li>
+          <li><b>Straight 直筒 two-piece</b> (top + skirt) — slimming, and most flattering on a slender frame.<a class="c" href="#s18">18</a></li>
+          <li>Tradition runs strongest in <strong>Guangdong / Chaoshan / Hong Kong &amp; Macau</strong>, and it's graded by thread density (below).<a class="c" href="#s18">18</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="rv" style="margin-top:46px;margin-bottom:4px">The 褂 ladder — how a 龙凤褂 is graded</h3>
+    <p class="rv muted narrow" style="margin-bottom:18px">A hand-embroidered 龙凤褂 is priced by how much of the red ground is covered in gold/silver thread. The rule brides repeat: <strong>the less red you can see, the more precious it is.</strong> This is the single most useful thing to know before you shop one.</p>
+    <div class="gua rv">
+      <div class="gua-row"><div class="gname"><span class="cn">小五福</span><span class="en">Xiǎo wǔfú</span></div><div class="gua-meter"><i style="width:30%"></i></div><div class="gprice">~30% gold<br><b>entry · most red</b></div></div>
+      <div class="gua-row"><div class="gname"><span class="cn">中五福</span><span class="en">Zhōng wǔfú</span></div><div class="gua-meter"><i style="width:50%"></i></div><div class="gprice">~50% gold<br><b>value pick</b></div></div>
+      <div class="gua-row"><div class="gname"><span class="cn">大五福</span><span class="en">Dà wǔfú</span></div><div class="gua-meter"><i style="width:70%"></i></div><div class="gprice">~70% gold<br><b>suits fuller figures</b></div></div>
+      <div class="gua-row"><div class="gname"><span class="cn">褂后</span><span class="en">Guà hòu</span></div><div class="gua-meter"><i style="width:90%"></i></div><div class="gprice">~90% gold<br><b>6–8 months</b></div></div>
+      <div class="gua-row top"><div class="gname"><span class="cn">褂皇</span><span class="en">Guà huáng · apex</span></div><div class="gua-meter"><i style="width:100%"></i></div><div class="gprice">99–100% gold<br><b>12–18 months</b></div></div>
+    </div>
+    <p class="gua-cap rv">% = share of the red ground covered by gold/silver thread.<a class="c" href="#s21">21</a> &nbsp;Indicative: a <b>machine-embroidered</b> 龙凤褂 runs only a few hundred to ~¥1,000;<a class="c" href="#s18">18</a> a 中五福 <b>rents</b> ≈¥3,000–6,000; a 褂皇 <b>rents</b> ¥20,000+, and a fully hand-embroidered custom 褂皇 can reach <b>¥200,000+</b>.<a class="c" href="#s21">21</a></p>
+
+    <div class="tells rv" style="margin-top:34px">
+      <div class="tell"><span class="mk">✚</span><div><b>Hand vs machine</b><span>Real hand-work is raised and luminous; on a top 卜心绣 piece the dragon and phoenix eyes seem to follow the light. Machine embroidery looks flat, hard and lifeless — that gap is what you're paying for.<a class="c" href="#s21">21</a><a class="c" href="#s19">19</a></span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>One hand, real thread</b><span>A fine 褂 is stitched start-to-finish by a single embroiderer across 300+ steps. Check the thread: genuine gold/silver stays bright, while cheap thread oxidises and dulls within a year.<a class="c" href="#s19">19</a></span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Match the grade to your figure</b><span>褂皇's dense raised work adds visual bulk, so fuller brides often look better in 褂后 or 大五福; the loose 秀禾 flatters everyone. Buy the grade that suits you, not the one with the most status.<a class="c" href="#s21">21</a></span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Try it on the right way</b><span>By tradition a 龙凤褂 is "worn once, married once" (着一次，嫁一次), so you try the top and skirt <em>separately</em>, not as a full set. Don't be thrown when they ask.<a class="c" href="#s18">18</a><a class="c" href="#s20">20</a></span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Order absurdly early</b><span>Hand-embroidered 秀禾 and 龙凤褂 need long lead times — book <strong>six months to a year ahead</strong>, and note that the best rental pieces get reserved out for peak dates too.<a class="c" href="#s21">21</a></span></div></div>
+      <div class="tell"><span class="mk">✚</span><div><b>Mixing is allowed</b><span>A popular modern combo is a white-ground 褂皇 top with a 秀禾 skirt, or 龙凤褂 for the door and a white gown for the ceremony — you needn't be a purist.<a class="c" href="#s19">19</a></span></div></div>
+    </div>
+
+    <div class="tip rv">
+      <div class="l">Buying 中式 at Huqiu — where &amp; what to pay</div>
+      <p>At the City, JUSERE's sister label <strong>天玺</strong> carries a full Chinese range (its experience store gives a whole floor to 秀禾/旗袍/龙凤褂), and dedicated houses such as <strong>汉绣红妆</strong> and <strong>兰朵</strong> are repeatedly praised for honest 秀禾 pricing and quality, with 江浙沪 rental available.<a class="c" href="#s17">17</a><a class="c" href="#s11">11</a><a class="c" href="#s12">12</a> Realistic Huqiu prices: machine-embroidered 秀禾 from a few hundred to ~¥1,000+; a good hand-worked 秀禾 roughly <strong>¥2,000–6,000</strong> (JUSERE's own run around ¥6k and don't discount); 旗袍 and 敬酒服 are cheap add-ons, and renting is common and far cheaper than buying.<a class="c" href="#s12">12</a><a class="c" href="#s16">16</a></p>
+    </div>
+
+    <div class="verdict narrow rv">
+      <p style="margin:0"><b>The honest high-end note:</b> the absolute apex of the gold-thread 褂皇 tradition is <strong>Cantonese / Hong Kong</strong>, not Suzhou — Hong Kong's heritage 裙褂 houses and the 潮汕 hand-embroiderers are the benchmark for a museum-grade full-gold 褂.<a class="c" href="#s18">18</a> Huqiu's real strength is <strong>秀禾服 (苏绣)</strong> and accessible-to-upper-mid 龙凤褂. Buy your 秀禾 here with confidence; for a five-figure 褂皇, compare against a Cantonese or HK atelier first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CUSTOM ================= -->
+<section id="custom">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§08</span> Made-to-measure</div>
+      <h2>Buy off the rack, or have it made</h2>
+      <p class="dek">Huqiu runs on a "shop in front, factory behind" model — much of the actual sewing now happens at production bases in Anhui.<a class="c" href="#s5">5</a><a class="c" href="#s6">6</a> Both paths are normal; they trade speed against fit.</p>
+    </div>
+
+    <div class="vs rv">
+      <div class="card">
+        <span class="tag t-new">现货 · in stock</span>
+        <h3>Take it today</h3>
+        <ul>
+          <li>Buy the sample (or a fresh-from-stockroom copy) and walk out with it.</li>
+          <li>Insist on this where you can — you avoid all shipping risk and "the photo looked different" disputes.<a class="c" href="#s8">8</a><a class="c" href="#s12">12</a></li>
+          <li>Always re-inspect the actual piece they hand you; have them fetch a new one and check it.</li>
+          <li>Minor alterations can often be done same-day or within hours.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag t-old">定制 · custom</span>
+        <h3>Made to your measurements</h3>
+        <ul>
+          <li>Cut to your size and chosen fabric, colour and train length — the best route to a clean fit.</li>
+          <li>Production typically runs <strong>4–6 weeks</strong>; spell out every detail (面料 / 颜色 / 款式 / 尺寸) in writing.</li>
+          <li>Collect in person if at all possible; remote alterations across cities are slow and frustrating.</li>
+          <li>Couture houses build this in; mid-tier shops may add ~10%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline rv">
+      <div class="tl"><div class="when">T-minus 3–4 mo</div><h4>Research</h4><p>Build a Xiaohongshu folder of styles you love. Lock silhouette, fabric and rough budget so you walk in with intent.</p></div>
+      <div class="tl"><div class="when">T-minus 2 mo</div><h4>Choose &amp; order</h4><p>Decide and place the order — the hard floor. Custom needs the lead time; ready-made still wants margin for alterations.</p></div>
+      <div class="tl"><div class="when">T-minus 3–6 wk</div><h4>Make &amp; collect</h4><p>Production window. Collect in person, re-inspect against your written spec, and try it on before you accept.</p></div>
+      <div class="tl"><div class="when">T-minus 2 wk</div><h4>Final fit</h4><p>Hold your weight steady from here. Last tweaks, steam, and pack with your stylist's needs in mind.</p></div>
+    </div>
+
+    <div class="tip rv">
+      <div class="l">The body-weight clause</div>
+      <p>Every veteran says the same thing: once the gown is ordered, <strong>don't crash-diet or bulk up</strong>. A body that changes shape after the measurements are taken means re-alterations, rushed and remote — the most common way a perfect dress goes wrong.</p>
+    </div>
+
+    <h3 class="rv" style="margin-top:46px;margin-bottom:4px">Scripts for designer &amp; couture houses</h3>
+    <p class="rv muted narrow" style="margin-bottom:18px">The pocket phrasebook in §09 covers quick haggling. These are longer messages for a serious appointment — they signal you care about design and workmanship, not the lowest price, which is exactly how the good houses want to be approached.</p>
+    <div class="scripts rv">
+      <div class="scriptcard">
+        <div class="sh">Booking an appointment</div>
+        <p class="zh">你好，我想预约看高端主纱／高级定制款。我的重点是原创设计、版型和做工，不是找最低价。请问现在店铺具体位置、试纱费、可试款数和拍照政策是什么？</p>
+        <p class="en">Hi — I'd like to book an appointment for high-end main gowns / couture. My priorities are original design, fit and workmanship, not lowest price. What's your current location, the try-on fee, how many pieces I can try, and your photo policy?</p>
+      </div>
+      <div class="scriptcard">
+        <div class="sh">Checking it's an original design</div>
+        <p class="zh">这件是你们品牌原创设计吗？有没有款号、设计图或系列名？会不会和其他店的公版／买手款撞款？</p>
+        <p class="en">Is this your brand's own original design? Does it have a style number, sketch or collection name? Is there a risk it's a public-market or buyer-selected style sold by other shops too?</p>
+      </div>
+      <div class="scriptcard">
+        <div class="sh">Inspecting construction</div>
+        <p class="zh">我可以看一下内衬、鱼骨、胸杯、拉链和裙摆收边吗？如果定制，最终成衣这些细节会和样衣一致吗？</p>
+        <p class="en">May I look at the lining, boning, cups, zip and hem finishing? If I order custom, will the final garment match these details on the sample?</p>
+      </div>
+      <div class="scriptcard">
+        <div class="sh">Locking the order</div>
+        <p class="zh">下单前可以把款号、面料、蕾丝／刺绣、修改点、交付日期、修改次数、尾款和售后写进订单吗？样衣照片也可以备注吗？</p>
+        <p class="en">Before I order, can we write the style number, fabric, lace/embroidery, alterations, delivery date, number of fittings, balance due and aftercare into the contract — and attach the sample photos?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MONEY (dark) ================= -->
+<section id="money" class="money">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§09</span> The money game</div>
+      <h2>Prices, the wholesale floor &amp; how to haggle</h2>
+      <p class="dek">Pricing here is deliberately opaque — a wedding gown is a once-in-a-lifetime, no-repeat purchase, so the incentive is to extract the maximum from each customer. Knowing the structure is your whole advantage.</p>
+    </div>
+
+    <p class="lead rv" style="margin-bottom:26px">Rough, post-haggle bands (RMB, indicative and always moving):</p>
+    <div class="tiers rv">
+      <div class="tier"><div class="price">¥300–800<small>skip for high-end</small></div><div class="desc">Street stalls, upper floors, factory racks. Thin materials, mass copies. Fine for a prop; not for your hero gown.</div></div>
+      <div class="tier"><div class="price">¥1,000–2,500<small>solid ready-made</small></div><div class="desc">Mid B-zone. Decent fabric and finish, good value. The sweet spot for a first or toasting dress.</div></div>
+      <div class="tier"><div class="price">¥2,500–6,000<small>design-forward</small></div><div class="desc">A-zone brands, MTF-tier houses, independent designers. <b>Where Huqiu's value is genuinely unbeatable</b> — visiting buyers report most gowns landing in the ¥2,000–4,000 band.<a class="c" href="#s31">31</a></div></div>
+      <div class="tier peak"><div class="price">¥5,000–10,000+<small>couture · C 区</small></div><div class="desc">Villa houses — JUSERE, Youlanda, Shengliya and peers. Exclusive original design, 重工 beadwork, full couture service. Often opens at ¥万元.<a class="c" href="#s16">16</a><a class="c" href="#s4">4</a></div></div>
+    </div>
+
+    <div class="insight rv">
+      <div class="lab">◆ The number nobody hands you</div>
+      <div class="big">×0.28</div>
+      <h3>Wholesale ≈ 28% of the tag</h3>
+      <p>The opening number is theatre. First-hand buyers are routinely advised to counter at just <strong>20–30% of the asking price (2–3折)</strong> and to treat roughly <strong>half-price as the realistic ceiling</strong>, not the floor — one buyer's worked example counters an opening ¥4,000 with ¥1,000.<a class="c" href="#s12">12</a><a class="c" href="#s8">8</a> The widely-repeated insider shorthand is that a wholesaler taking five-plus pieces pays around <strong>28% of the ticket (打2.8折)</strong>, with a solo walk-in's true floor a little above that — so a "¥3,000" gown can really bottom out near ¥1,000–1,200. <em>(A rule of thumb, not a guarantee — and it does <strong>not</strong> apply to the branded couture houses below.)</em></p>
+    </div>
+
+    <div class="script rv">
+      <div class="playbook">
+        <h3><span class="ic">◆</span> The haggling playbook</h3>
+        <div class="step"><b>Hide your hand.</b> Don't gush over a gown, don't look like you travelled across the country for it, don't reveal your real budget. Interest is leverage you give away.</div>
+        <div class="step"><b>Let them open — then open low.</b> Make the shopkeeper name a real "floor" price first. Counter well below your target and climb in small steps (¥50 at a time), not big jumps.<a class="c" href="#s12">12</a></div>
+        <div class="step"><b>Use the calculator.</b> Numbers typed back and forth, quietly, keeps it unemotional — the local way to negotiate.</div>
+        <div class="step"><b>Bring the right people.</b> Go with a sharp-tongued friend, ideally one who can "analyse the cost." Skip bringing your fiancé — shopkeepers reliably mark up couples.<a class="c" href="#s8">8</a></div>
+        <div class="step"><b>The walk-away.</b> "<span class="cn">我再看看</span>" ("I'll look around") and a step toward the door is the most powerful move you have. Stay calm; never haggle several gowns at once and lose track.</div>
+        <div class="step"><b>Time it right.</b> Opening and closing hours, weekdays, and the slow heat of July–August mean fewer customers and softer prices — and sometimes a waived try-on fee.</div>
+      </div>
+      <div class="donthaggle">
+        <h3><span class="ic">◆</span> When <em>not</em> to haggle</h3>
+        <p>The branded couture houses — JUSERE above all — largely hold their prices. Tags are fixed to protect the brand; the most you'll usually see is a discount on selected lines (think ~30% off a marked-down piece), not open bargaining on current designs.<a class="c" href="#s16">16</a></p>
+        <p>That's not a rip-off — it's a different product. You're paying for original design, hand-work, fit and service, and the price reflects it.</p>
+        <div class="note">At a factory stall, haggle hard. At a designer house, negotiate gently or not at all, and spend your energy judging the <em>garment</em> instead.</div>
+      </div>
+    </div>
+
+    <div class="phrase-wrap rv">
+      <h3 style="color:#fff;font-family:var(--ff-display);font-weight:600;font-size:22px;display:flex;align-items:center;gap:10px"><span style="color:var(--celadon)">◆</span> Pocket phrasebook</h3>
+      <p class="muted" style="margin:8px 0 0;max-width:60ch">Enough Mandarin to point, ask and negotiate. Don't worry about tones — context carries it, and a calculator covers the numbers.</p>
+      <div class="phrasebook">
+        <div class="pr"><span class="zh">这件多少钱？</span><span class="py">Zhè jiàn duōshao qián?</span><span class="en">How much is this one?</span></div>
+        <div class="pr"><span class="zh">能便宜点吗？</span><span class="py">Néng piányi diǎn ma?</span><span class="en">Can you come down a bit?</span></div>
+        <div class="pr"><span class="zh">最低多少？</span><span class="py">Zuìdī duōshao?</span><span class="en">What's your lowest?</span></div>
+        <div class="pr"><span class="zh">太贵了。</span><span class="py">Tài guì le.</span><span class="en">That's too expensive.</span></div>
+        <div class="pr"><span class="zh">有现货吗？</span><span class="py">Yǒu xiànhuò ma?</span><span class="en">Do you have it in stock to take today?</span></div>
+        <div class="pr"><span class="zh">这是原创吗？</span><span class="py">Zhè shì yuánchuàng ma?</span><span class="en">Is this an original design?</span></div>
+        <div class="pr"><span class="zh">试纱要钱吗？</span><span class="py">Shì shā yào qián ma?</span><span class="en">Is there a try-on fee?</span></div>
+        <div class="pr"><span class="zh">可以改尺寸吗？</span><span class="py">Kěyǐ gǎi chǐcùn ma?</span><span class="en">Can you alter the size?</span></div>
+        <div class="pr"><span class="zh">多久能做好？</span><span class="py">Duōjiǔ néng zuòhǎo?</span><span class="en">How long to make it?</span></div>
+        <div class="pr"><span class="zh">我再看看。</span><span class="py">Wǒ zài kànkan.</span><span class="en">I'll think about it / look around. (the walk-away)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FITTING ROOM ================= -->
+<section id="fitting">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§10</span> In the fitting room</div>
+      <h2>Try-on etiquette &amp; what to bring</h2>
+      <p class="dek">A day here is a marathon — hundreds of shops, a lot of walking, a lot of zipping in and out. Show up prepared and you'll try on more, judge better, and enjoy it.</p>
+    </div>
+
+    <div class="bring rv">
+      <div class="col">
+        <h3>Bring &amp; do</h3>
+        <ul class="checklist">
+          <li><b>Seamless underwear + nubra or strapless bra</b><br><span>So necklines and backs sit right — you'll be in and out of many gowns.</span></li>
+          <li><b>Easy layers — a button or zip top, no pullovers</b><br><span>Fast to remove without wrecking your hair or makeup.</span></li>
+          <li><b>Comfortable flats for walking</b><br><span>Shops keep heels to try with; save your feet for the hours of floor.</span></li>
+          <li><b>Light makeup + your wedding-ish hair</b><br><span>Up if you'll wear it up, down if down — it changes the whole look.</span></li>
+          <li><b>A big empty suitcase (26"+)</b><br><span>If buying in person: one main gown can fill it. Bring two if buying a set.</span></li>
+          <li><b>Cash, a sharp friend, and snacks/water</b><br><span>Old-street food is thin; the new complex has a food court in A-zone.</span></li>
+          <li><b>Book couture houses ahead</b><br><span>JUSERE and peers get busy; an appointment gets you the trial styling.</span><a class="c" href="#s11">11</a><a class="c" href="#s17">17</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Know &amp; avoid</h3>
+        <ul class="checklist avoid">
+          <li><b>Expect "no photos" while trying on</b><br><span>Most shops forbid it to protect designs. Don't fight it — buy first, then photograph the gown you've purchased for your stylist.</span><a class="c" href="#s12">12</a><a class="c" href="#s7">7</a></li>
+          <li><b>Ask about the try-on fee up front</b><br><span>Heavy-work houses may charge ~¥30–50 (often waived on purchase, or when it's quiet). Ask before you try to avoid friction.</span><a class="c" href="#s8">8</a><a class="c" href="#s10">10</a><a class="c" href="#s22">22</a></li>
+          <li><b>Don't visit on a rainy day</b><br><span>You'll be walking between buildings and dragging hems through puddles — miserable, and it sours the haggling.</span></li>
+          <li><b>Don't reveal your wedding date too early</b><br><span>A date far off can cool the service; a date close signals a serious buyer. Read the room.</span></li>
+          <li><b>Don't trust the showroom mirror alone</b><br><span>Lighting is engineered to dazzle. Always check colour and detail near real daylight.</span></li>
+          <li><b>Don't pile gowns into one negotiation</b><br><span>Price and decide one piece at a time, or you'll over-buy something you don't love.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow"><span class="num">§11</span> Plan the visit</div>
+      <h2>Getting there &amp; doing it in a day (or two)</h2>
+      <p class="dek">The City sits just south of the Tiger Hill scenic area, about 20 minutes by taxi from Suzhou Railway Station and easily reached from Shanghai by high-speed rail.</p>
+    </div>
+
+    <figure class="photo rv">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/2024-Apr_Suzhou_-_Tiger_Hill_Scenic_Area_%28Hu_Qiu%29_%E8%99%8E%E4%B8%98_-_img_16_city_view.jpg/1000px-2024-Apr_Suzhou_-_Tiger_Hill_Scenic_Area_%28Hu_Qiu%29_%E8%99%8E%E4%B8%98_-_img_16_city_view.jpg" alt="View over the rooftops of Suzhou seen from Tiger Hill, in the city's northwest." loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').style.display='none'">
+      <figcaption>Suzhou seen from Tiger Hill, in the city's northwest — the Wedding City sits just south of here, about 20 minutes by taxi from the railway station. Photo via <a href="https://commons.wikimedia.org/wiki/Category:Tiger_Hill,_Suzhou" target="_blank" rel="noopener">Wikimedia Commons</a> (Creative Commons).</figcaption>
+    </figure>
+
+    <div class="visit-grid rv">
+      <div class="card addr">
+        <div class="hd"><span class="cn">虎丘婚纱城</span><span class="en">The essentials</span></div>
+        <dl>
+          <div class="row"><dt>Address</dt><dd><span class="cn">苏州市姑苏区虎阜路999号</span><span class="sub">Hufu Rd No. 999, Gusu District, Suzhou (near 虎池路 × 金湾街)<a class="c" href="#s9">9</a></span></dd></div>
+          <div class="row"><dt>Hours</dt><dd>≈ 9:00 – 18:00, daily<span class="sub">Some shops/seasons vary (a few open earlier/later) — confirm same-day.<a class="c" href="#s8">8</a></span></dd></div>
+          <div class="row"><dt>Parking</dt><dd>2,000+ spaces · free<span class="sub">Ground lots + 2 basement levels.<a class="c" href="#s1">1</a><a class="c" href="#s2">2</a></span></dd></div>
+          <div class="row"><dt>Best day</dt><dd>Weekday, dry weather<span class="sub">Fewer crowds, softer prices, full attention from staff.</span></dd></div>
+          <div class="row"><dt>Official</dt><dd>hqhsc.com<span class="sub">Run by the state-owned Suzhou Huqiu Wedding Dress Investment Co.<a class="c" href="#s1">1</a></span></dd></div>
+        </dl>
+      </div>
+
+      <div class="routes">
+        <h3>How to arrive</h3>
+        <div class="route"><span class="mode rec">Metro</span><div class="rt"><b>Line 6 → 金鸡墩 (Jinjidun)</b>, exit 1 or 4, then a short walk. <span>Suzhou's newer lines (6 / 8) serve the area; older "Line 4 to 虎丘" advice is dated — check the live map in your app.<a class="c" href="#s2">2</a><a class="c" href="#s22">22</a></span></div></div>
+        <div class="route"><span class="mode">Taxi</span><div class="rt"><b>~20 min from Suzhou Railway Station</b> (≈¥15–25). <span>Tell the driver "<span class="cn">虎丘婚纱城</span>" — every local knows it.<a class="c" href="#s11">11</a></span></div></div>
+        <div class="route"><span class="mode">Bus</span><div class="rt"><b>"虎丘婚纱城" stop</b> on many city lines (e.g. 803 / 866 / 86 / 311 / 382) and the 苏州好行 tourist buses. <span>Convenient if you're already central.<a class="c" href="#s9">9</a><a class="c" href="#s2">2</a></span></div></div>
+        <div class="route"><span class="mode">From Shanghai</span><div class="rt"><b>~30 min by high-speed rail</b> to Suzhou, then metro/taxi. <span>An easy day trip; an overnight makes two-session shopping painless.</span></div></div>
+      </div>
+    </div>
+
+    <div class="twoday">
+      <h3 class="rv">A sane two-session strategy</h3>
+      <p class="rv muted narrow">The complex is genuinely a kilometre end-to-end. Trying to scout <em>and</em> buy in one exhausted pass is how people overpay. Split it.</p>
+      <div class="grid g2">
+        <div class="card day rv">
+          <div class="d">Session 1 · Scout</div>
+          <h4>Calibrate your eye</h4>
+          <ol>
+            <li>Go straight to <b>Zone C</b> first — see the couture houses (JUSERE, Youlanda…) so you know what top quality feels like.</li>
+            <li>Walk <b>A</b> level 1 and <b>B1/B2</b> to compare; note shops and styles, don't commit.</li>
+            <li>Window-shop the whole loop from outside the glass; <b>shortlist</b> the rooms worth a real try-on.</li>
+            <li>Lunch at the A-zone sunken plaza. Photograph nothing inside shops.</li>
+          </ol>
+        </div>
+        <div class="card day rv">
+          <div class="d">Session 2 · Close</div>
+          <h4>Try on &amp; buy</h4>
+          <ol>
+            <li>Return to your shortlist with intent and your sharpest negotiator.</li>
+            <li>Use <b>opening/closing hours</b> for the shops you most want — quieter, better prices.</li>
+            <li>Settle the gowns one at a time; take in-stock pieces with you where you can.</li>
+            <li>For custom: confirm fabric, colour, train and size <b>in writing</b>, and the collection date.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHIPPING ================= -->
+<section id="shipping">
+  <div class="wrap">
+    <div class="sec-head narrow rv">
+      <div class="eyebrow"><span class="num">§12</span> Getting it home</div>
+      <h2>Out-of-town &amp; overseas</h2>
+      <p class="dek">Huqiu has shipped gowns to the world for two decades — but for your own once-only dress, distance adds real risk. Manage it deliberately.</p>
+    </div>
+    <div class="narrow rv">
+      <p><strong>Within China:</strong> shops routinely ship custom orders, usually by SF Express (顺丰), cash-on-delivery, with trained gowns costing more to send. The recurring warning from brides is blunt — what arrives can differ from the sample you tried. <span class="pull">Wherever feasible, collect in person and inspect before you accept.</span><a class="c" href="#s12">12</a> If you must ship, get the spec and remedy-if-wrong in writing, and photograph the agreed sample.</p>
+      <p><strong>Abroad:</strong> entirely doable, and the export-oriented houses do it all the time — JUSERE alone ships to 40+ countries.<a class="c" href="#s14">14</a> Two clean paths: buy in person and carry the gown home as a garment bag / extra luggage (lowest risk), or order and have it forwarded internationally (confirm courier, duties and timing <em>before</em> you pay). The thing that goes wrong abroad is alterations: a remote fix means re-shipping across borders, so prioritise an <strong>in-stock piece you can take</strong>, or build in a generous timeline and a local tailor for final tweaks at home.</p>
+    </div>
+    <div class="tip rv narrow">
+      <div class="l">The golden rule, restated</div>
+      <p>Take it with you if you possibly can. Every layer of distance between you and the finished gown — shipping, remote alteration, a dispute you can't walk into the shop to settle — is a layer of risk on a dress you only get to wear once.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RED FLAGS ================= -->
+<section id="flags" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Watch list</div>
+      <h2>Red flags &amp; common traps</h2>
+    </div>
+    <div class="flags rv">
+      <div class="flag-item"><h4><span class="x">✕</span> "Same dress, third of the price online"</h4><p>If you can screenshot it and find the identical piece on Taobao far cheaper, it isn't exclusive design and you shouldn't pay couture money for it. Quality below ~¥500 online is genuinely poor — there is no ¥300 dream gown.</p></div>
+      <div class="flag-item"><h4><span class="x">✕</span> Glued lace &amp; shed-on-touch beads</h4><p>Flat, glued-on lace and beads that come away when tugged signal cut corners. On a "heavy-work" gown, weight and securely sewn beadwork are what you're paying for.</p></div>
+      <div class="flag-item"><h4><span class="x">✕</span> Ship-only "custom" pressure</h4><p>Hard pressure to order custom-and-ship while discouraging an in-stock take-away is the setup for the classic "arrived different" dispute. Hold firm on inspecting or collecting in person.</p></div>
+      <div class="flag-item"><h4><span class="x">✕</span> The couple mark-up</h4><p>Walk in visibly as a couple and many sellers quietly raise the opening price. Bring a friend instead; keep your fiancé (and your obvious enthusiasm) out of the negotiation.</p></div>
+      <div class="flag-item"><h4><span class="x">✕</span> Stale addresses</h4><p>Old guides list units that have since moved — much of the original street was cleared. Always re-confirm a shop's current location on 大众点评 / Xiaohongshu / WeChat before walking to it.</p></div>
+      <div class="flag-item"><h4><span class="x">✕</span> Mirror-and-lights dazzle</h4><p>Showroom lighting (and deliberately dim "anti-photo" zones) flatter everything and hide flaws. Never finalise colour or quality without a look in real daylight.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GAME PLAN ================= -->
+<section id="plan" class="plan-sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">The short version</div>
+      <h2>A newcomer's game plan</h2>
+      <p class="dek">If you remember nothing else, remember these eight moves.</p>
+    </div>
+    <div class="plansteps rv">
+      <div class="pstep"><div class="pn">1</div><div class="pc"><b>Go to the City, not the street.</b> 虎丘婚纱城, 虎阜路999号. Weekday, dry day, suitcase in hand.</div></div>
+      <div class="pstep"><div class="pn">2</div><div class="pc"><b>Start in Zone C.</b> See the couture villas first to calibrate your eye, then compare outward through A and B.</div></div>
+      <div class="pstep"><div class="pn">3</div><div class="pc"><b>Do your homework first.</b> A Xiaohongshu folder of styles you love makes the whole day faster and cheaper.</div></div>
+      <div class="pstep"><div class="pn">4</div><div class="pc"><b>Judge the garment, not the lights.</b> Heft, inside seams, secure beadwork, daylight colour — and ask "<span class="cn">原创吗？</span>".</div></div>
+      <div class="pstep"><div class="pn">5</div><div class="pc"><b>Haggle the stalls, not the houses.</b> Hide your interest, let them open, climb in ¥50s; at brand couture, negotiate gently or pay the fixed price.</div></div>
+      <div class="pstep"><div class="pn">6</div><div class="pc"><b>Order at least two months out</b> — more for custom. Then hold your weight steady until the wedding.</div></div>
+      <div class="pstep"><div class="pn">7</div><div class="pc"><b>Take it with you</b> if you can; collect custom in person and inspect against a written spec before you accept.</div></div>
+      <div class="pstep"><div class="pn">8</div><div class="pc"><b>Bring a sharp friend, not your fiancé,</b> light makeup, easy clothes, flats, cash — and verify every shop's current unit before you walk.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Sources &amp; notes</div>
+    <h3>Where this guide comes from</h3>
+    <p style="color:#AEB7AE;max-width:70ch;font-size:15px">Compiled from the official complex (中文 and English), Chinese trade and news reporting, brand records, first-hand buyer accounts on Zhihu, Xiaohongshu and 婚礼纪, and English-language reference — BBC/Smithsonian, Wikipedia, sourcing-industry and expat-bride guides — so the headline facts are cross-checked across both languages. The bracketed numbers throughout — like <span style="font-family:var(--ff-mono);color:var(--celadon)">[4]</span> — link down to the matching source; tap one to check a claim. Every link below was confirmed live in June 2026.</p>
+    <div class="srclist">
+      <a id="s1" href="http://hqhsc.com/" target="_blank" rel="noopener"><span class="s">Official · 官方</span><span class="n">1</span> 虎丘婚纱城 — official site (scale, operator, 全产业链 positioning)</a>
+      <a id="s2" href="https://baike.baidu.com/item/%E8%99%8E%E4%B8%98%E5%A9%9A%E7%BA%B1%E5%9F%8E/6413108" target="_blank" rel="noopener"><span class="s">百度百科</span><span class="n">2</span> 虎丘婚纱城 — encyclopedia (timeline 2010/2013/2015, ~80% of first-tier market, Metro Line 6, zone names)</a>
+      <a id="s3" href="https://www.sohu.com/a/629394912_233766" target="_blank" rel="noopener"><span class="s">搜狐 Sohu</span><span class="n">3</span> 苏州虎丘，承包了全国70％的婚纱 (the ~70% figure, SHEIN / LightInTheBox origin, 2018 fire crackdown, Anhui history)</a>
+      <a id="s4" href="https://36kr.com/p/1955360831528066" target="_blank" rel="noopener"><span class="s">36氪 36Kr · 2025</span><span class="n">4</span> 在苏州虎丘，新人用600块钱买一件婚纱 (C-zone = priciest designers, JJ'S House, scale)</a>
+      <a id="s5" href="https://m.huxiu.com/article/684701.html" target="_blank" rel="noopener"><span class="s">虎嗅 Huxiu</span><span class="n">5</span> 全国最大婚纱供应链，藏在这座小城里 (300,000 m² scale, designer C-zone, factories → Lu'an)</a>
+      <a id="s6" href="https://zhuanlan.zhihu.com/p/158580298" target="_blank" rel="noopener"><span class="s">知乎 · insider</span><span class="n">6</span> 苏州婚纱行业内人写的苏州婚纱攻略 (Old Street → City, Anhui relocation, C-zone tops out in the tens of thousands)</a>
+      <a id="s7" href="https://www.zhihu.com/question/298197867" target="_blank" rel="noopener"><span class="s">知乎 Zhihu</span><span class="n">7</span> 虎丘婚纱城怎么走，有推荐的店吗 (A/B/C layout, C-zone villas + fashion-week / 高定 / 绝设, what to bring)</a>
+      <a id="s8" href="https://www.hunliji.com/bai_ke/detail_46143" target="_blank" rel="noopener"><span class="s">婚礼纪</span><span class="n">8</span> 虎丘婚纱城选纱攻略 (zones, 9am open + free parking, try-on fees, the haggling playbook)</a>
+      <a id="s9" href="https://blog.sina.com.cn/s/blog_63e574150102wnn8.html" target="_blank" rel="noopener"><span class="s">新浪博客 Sina</span><span class="n">9</span> 新人到苏州虎丘买婚纱必看攻略 (drive-nav 虎阜路999号, 好行 1/2/6 to the City, A&C are mid-to-high)</a>
+      <a id="s10" href="http://www.txxiwang.com/2878.html" target="_blank" rel="noopener"><span class="s">喜望 Guide</span><span class="n">10</span> 去虎丘婚纱城必看购买攻略 (ground-floor brands cost more, fabric types, 秀禾 / 龙凤褂, try-on fees)</a>
+      <a id="s11" href="https://www.lukou.com/userfeed/31463500" target="_blank" rel="noopener"><span class="s">路口 · 备婚日记</span><span class="n">11</span> 苏州虎丘婚纱城 初探 (first-hand JUSERE visit: book ahead, 3 free try-ons; HSR → station taxi ≈¥25)</a>
+      <a id="s12" href="https://www.xiaohongshu.com/mobile/question/807286" target="_blank" rel="noopener"><span class="s">小红书 RED</span><span class="n">12</span> 虎丘婚纱城攻略 (first-hand haggling: ¥15k → ¥4–5k in C-zone, open at 2–3折, no photos, take it with you)</a>
+      <a id="s13" href="http://www.jueshe.com/jusere" target="_blank" rel="noopener"><span class="s">Brand · 官方</span><span class="n">13</span> 绝设 JUSERE — official site (founded 2002, HQ 虎林路62号, three 十佳 designers)</a>
+      <a id="s14" href="https://m.yishuqiwang.com/ppzx/3337.html" target="_blank" rel="noopener"><span class="s">Brand profile</span><span class="n">14</span> 绝设 JUSERE profile (300+ staff, exports to 40+ countries, six China Int'l Fashion Week shows, 天玺 sister brand)</a>
+      <a id="s15" href="https://baike.baidu.com/item/%E8%8B%8F%E5%B7%9E%E7%BB%9D%E8%AE%BE%E5%A9%9A%E7%BA%B1%E7%A4%BC%E6%9C%8D%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20534882?noadapt=1" target="_blank" rel="noopener"><span class="s">百度百科</span><span class="n">15</span> 苏州绝设婚纱礼服有限公司 (three brands, ~20,000 m² R&D centre, fashion week since 2015, designer awards)</a>
+      <a id="s16" href="https://www.zhihu.com/question/26343653" target="_blank" rel="noopener"><span class="s">知乎 Zhihu</span><span class="n">16</span> 苏州哪里买婚纱比较好 (JUSERE opens ¥5–6k & rarely discounts; 圣利亚 / 婉纱仙妮 et al.; tier-1-city caveat)</a>
+      <a id="s17" href="https://m.jiehun.com.cn/gonglve/g-15962" target="_blank" rel="noopener"><span class="s">婚博会 Expo</span><span class="n">17</span> 打卡 JUSERE绝设 &amp; 天玺 (the 5-floor 体验店: 轻奢 / 豪华高定 / 天玺中式, booking)</a>
+      <a id="s18" href="https://m.hunliji.com/ask/detail_19622" target="_blank" rel="noopener"><span class="s">婚礼纪</span><span class="n">18</span> 秀禾服和龙凤褂有什么分别 (the two traditions, density grades, machine-embroidery pricing, Cantonese/HK roots)</a>
+      <a id="s19" href="https://www.jiehun.com.cn/baike/catalog1106/" target="_blank" rel="noopener"><span class="s">婚博会 baike</span><span class="n">19</span> 龙凤褂含义与穿着禁忌 (卜心绣 / 粤绣, 300+ steps by one embroiderer, thread quality, motifs, mix-and-match)</a>
+      <a id="s20" href="https://zhuanlan.zhihu.com/p/31446656" target="_blank" rel="noopener"><span class="s">知乎 Zhihu</span><span class="n">20</span> 中式婚礼：秀禾服和龙凤褂的区别 (秀禾 = 苏绣/潮绣 flat work, 马面裙, the 《橘子红了》 origin)</a>
+      <a id="s21" href="https://longfenggua.com/%E9%BE%99%E5%87%A4%E8%A4%82%E7%AD%89%E7%BA%A7%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E8%A4%82%E7%9A%87-%E8%A4%82%E5%90%8E-%E5%B0%8F%E8%A4%82%E7%9A%87%E9%80%89%E8%B4%AD%E6%8A%80%E5%B7%A7%E4%B8%8E/" target="_blank" rel="noopener"><span class="s">龙凤褂 specialist</span><span class="n">21</span> 龙凤褂等级全解析 (exact density %, 褂皇 timeline &amp; ¥, rental-vs-custom, fit advice)</a>
+      <a id="s22" href="https://gs.ctrip.com/html5/you/sight/suzhou11/137562.html" target="_blank" rel="noopener"><span class="s">携程 Ctrip</span><span class="n">22</span> 虎丘婚纱攻略 (Metro Line 6 → 金鸡墩 exits 1/4, try-on fee ¥30/¥50, free parking)</a>
+      <a id="s23" href="http://jsggzy.jszwfw.gov.cn/jyxx/003001/003001001/20260123/85eff807-0f6d-494d-91e4-29f3c8f55dd1.html" target="_blank" rel="noopener"><span class="s">江苏公共资源 · 官方</span><span class="n">23</span> 虎丘婚纱城C区综合改造工程施工招标 (official, 2026-01-23): A区圆筒楼 + C区 C1–C12 renovation, prequalification closed 2026-02-05</a>
+      <a id="s24" href="http://www.denise-bridal.com/brand/" target="_blank" rel="noopener"><span class="s">Brand · 官方</span><span class="n">24</span> DENISE 丹妮斯 — official site (Suzhou-origin couture house, founder chaired the national bridalwear association, exports)</a>
+      <a id="s25" href="https://www.zhihu.com/question/276342398/answer/1565666836" target="_blank" rel="noopener"><span class="s">知乎 · insider</span><span class="n">25</span> 一千左右与上万的婚纱有什么区别 (a shop-owner's "six channels" quality tiers; 丹尼斯 near top-tier, 圣利亚 reportedly slipped)</a>
+      <a id="s26" href="https://zhuanlan.zhihu.com/p/159057075" target="_blank" rel="noopener"><span class="s">知乎 · trade</span><span class="n">26</span> 苏州虎丘婚纱城采购指南 (C区 names — 绝设 / 丹尼斯 / 圣利亚, 万元起步, international shows; B1/B2 as the buying floors; E区 never developed)</a>
+      <a id="s27" href="http://en.hqhsc.com/" target="_blank" rel="noopener"><span class="s">Official · English</span><span class="n">27</span> Huqiu Bridal City — official English site (120,000 m² site / 300,000 m² built, 4F + 2 below, 2,000+ parking, ¥2.7bn, 400+ brands, Zones A–D)</a>
+      <a id="s28" href="https://www.smithsonianmag.com/travel/suzhou-china-wedding-dress-capital-180962674/" target="_blank" rel="noopener"><span class="s">Smithsonian / BBC</span><span class="n">28</span> The Wedding Dress Capital of the World (the widely-cited BBC figure: up to 80% of the world's wedding dresses; 1,000+ shops near Tiger Hill)</a>
+      <a id="s29" href="https://en.wikipedia.org/wiki/Huqiu,_Suzhou" target="_blank" rel="noopener"><span class="s">Wikipedia · EN</span><span class="n">29</span> Huqiu, Suzhou (~1,200 dress factories; JUSERE noted for professional design/custom; largest production-and-sales base since 2012; 30+ countries)</a>
+      <a id="s30" href="https://jingsourcing.com/b-suzhou-wedding-dress-market/" target="_blank" rel="noopener"><span class="s">JingSourcing · 2026</span><span class="n">30</span> Suzhou Huqiu Bridal City: 2026 buying tips (80% of China's wholesale; $2,000→$200; 42 football fields; open at 50%; Dingji production base)</a>
+      <a id="s31" href="https://rachelmeetschina.com/2024/08/26/suzhous-wedding-dress-market-the-largest-bridal-shopping-destination-in-china/" target="_blank" rel="noopener"><span class="s">Expat · first-hand</span><span class="n">31</span> Rachel Meets China (2024 visit: most gowns ¥2,000–4,000, on-the-spot bargaining, mostly Chinese sizing, adjustable backs)</a>
+      <a id="s32" href="http://www.jusere.com/brand" target="_blank" rel="noopener"><span class="s">Brand · English</span><span class="n">32</span> JUSERE — official English brand page (founded 2002; three brands JUSERE / TIANXI / SHINESHERE; original-design leader; exports 30+ countries)</a>
+      <a id="s33" href="https://www.lukou.com/userfeed/31372911" target="_blank" rel="noopener"><span class="s">路口 · 备婚</span><span class="n">33</span> （平价向）2000元三件 · 苏州虎丘婚纱城选购指南 (try styles in C / buy in B; free three-piece try with a 大众点评 booking; rental packages ran ¥5,000 / ¥8,999 / ¥9,500 for four pieces + a bridesmaid dress)</a>
+      <a id="s34" href="https://www.hunliji.com/bai_ke/detail_46140" target="_blank" rel="noopener"><span class="s">婚礼纪 · 好店清单</span><span class="n">34</span> 苏州虎丘婚纱城好吗 有哪些推荐的婚纱店 (A 高端 / B 性价比 / C 品牌, ¥几百–上万; 西式婚纱·中式婚服·男士西服·伴娘服; shop units incl. 绝设 C4, 满庭芳 B2-118, 朱恩弦 B1, GUZI 116-129, 工匠 A区1层)</a>
+    </div>
+
+    <p class="disc"><b>Please verify before you travel.</b> Shop names, unit numbers and prices in Huqiu change frequently — the original street was largely cleared, tenants continue to move, and an official 2026 renovation of C区 (buildings C1–C12) and A区's cylinder building may shift entrances and shop locations.<a class="c" href="#s23">23</a> Specific shops here are the names most consistently recommended across Chinese sources and are offered as a starting shortlist, not an endorsement; always confirm a shop's <b>current location and standing on 大众点评 / Xiaohongshu / WeChat</b>, and judge every gown in person. The "×0.28 wholesale" figure is a widely-repeated insider rule of thumb, not a guaranteed price. This guide is independent and unaffiliated with any shop or the complex. Compiled June 2026.</p>
+
+    <div class="colophon"><span>虎丘婚纱城 Field Guide</span> <span class="dot">◆</span> <span>for high-design, high-quality, high-end gowns</span> <span class="dot">◆</span> <span>苏州 · Suzhou</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // scroll progress
+  var bar=document.getElementById('progress');
+  function prog(){
+    var h=document.documentElement;
+    var sc=h.scrollTop||document.body.scrollTop;
+    var max=(h.scrollHeight-h.clientHeight)||1;
+    bar.style.width=(sc/max*100)+'%';
+  }
+  // active section in nav
+  var links=[].slice.call(document.querySelectorAll('nav.links a'));
+  var map={};
+  links.forEach(function(a){var id=a.getAttribute('href').slice(1);var el=document.getElementById(id);if(el)map[id]=el;});
+  function active(){
+    var pos=(window.scrollY||window.pageYOffset)+ (window.innerHeight*0.32);
+    var cur=null;
+    for(var id in map){ if(map[id].offsetTop<=pos) cur=id; }
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href').slice(1)===cur);});
+  }
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){window.requestAnimationFrame(function(){prog();active();ticking=false;});ticking=true;}
+  },{passive:true});
+  prog();active();
+
+  // reveal on scroll
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if(reduce || !('IntersectionObserver' in window)){
+    rv.forEach(function(e){e.classList.add('in');});
+  } else {
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.06});
+    rv.forEach(function(e){io.observe(e);});
+    setTimeout(function(){ rv.forEach(function(e){e.classList.add('in');}); }, 2200);
+  }
+})();
+</script>
+</body>
+</html>
